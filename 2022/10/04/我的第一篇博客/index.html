@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="我的第一篇博客, Hexo">
+    <meta name="description" content="# 1. 什么是 Redis
+Redis (Remote Dictionary Server) 是一个使用 C 语言编写的，开源的（BSD 许可）高性能非关系型（NoSQL）的键值对数据库。Redis 可以存储键和五种不同类型的值之间的映射">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>我的第一篇博客 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -334,12 +335,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">我的第一篇博客</h1>
                 </div>
             </div>
         </div>
@@ -375,7 +376,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-10-01
+                    2022-10-04
                 </div>
                 
 
@@ -396,20 +397,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start">#</a> Quick Start</h2>
-<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post">#</a> Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server">#</a> Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files">#</a> Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites">#</a> Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h3 id="1什么是redis"><a class="markdownIt-Anchor" href="#1什么是redis">#</a> 1. 什么是 Redis</h3>
+<p>Redis (Remote Dictionary Server) 是一个使用 C 语言编写的，开源的（BSD 许可）高性能非关系型（NoSQL）的键值对数据库。Redis 可以存储键和五种不同类型的值之间的映射。键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。与传统数据库不同的是 Redis 的数据是存在内存中的，所以读写速度非常快，因此 redis 被广泛应用于缓存方向，每秒可以处理超过 10 万次读写操作，是已知性能最快的 Key-Value DB。另外，Redis 也经常用来做分布式锁。除此之外，Redis 支持事务 、持久化、LUA 脚本、LRU 驱动事件、多种集群方案。</p>
+<h3 id="2redis有哪些优缺点"><a class="markdownIt-Anchor" href="#2redis有哪些优缺点">#</a> 2.Redis 有哪些优缺点</h3>
+<p>优点:</p>
+<p>2.1 读写性能优异， Redis 能读的速度是 110000 次 /s，写的速度是 81000 次 /s。</p>
+<p>2.2 支持数据持久化，支持 AOF 和 RDB 两种持久化方式。</p>
+<p>2.3 支持事务，Redis 的所有操作都是原子性的，同时 Redis 还支持对几个操作合并后的原子性执行。</p>
+<p>2.4 数据结构丰富，除了支持 string 类型的 value 外还支持 hash、set、zset、list 等数据结构。</p>
+<p>2.5 支持主从复制，主机会自动将数据同步到从机，可以进行读写分离。</p>
+<p>缺点:</p>
+<p>2.1 数据库容量受到物理内存的限制，不能用作海量数据的高性能读写，因此 Redis 适合的场景主要局限在较小数据量的高性能操作和运算上。</p>
+<p>2.2Redis 不具备自动容错和恢复功能，主机从机的宕机都会导致前端部分读写请求失败，需要等待机器重启或者手动切换前端的 IP 才能恢复。</p>
+<p>2.3 主机宕机，宕机前有部分数据未能及时同步到从机，切换 IP 后还会引入数据不一致的问题，降低了系统的可用性。</p>
+<p>2.4Redis 较难支持在线扩容，在集群容量达到上限时在线扩容会变得很复杂。为避免这一问题，运维人员在系统上线时必须确保有足够的空间，这对资源造成了很大的浪费。</p>
+<p>为什么要用 Redis / 为什么要用缓存</p>
+<h3 id="3为什么要用-redis-为什么要用缓存"><a class="markdownIt-Anchor" href="#3为什么要用-redis-为什么要用缓存">#</a> 3. 为什么要用 Redis / 为什么要用缓存</h3>
+<p>3.1 高性能：</p>
+<p>假如用户第一次访问数据库中的某些数据。这个过程会比较慢，因为是从硬盘上读取的。将该用户访问的数据存在数缓存中，这样下一次再访问这些数据的时候就可以直接从缓存中获取了。操作缓存就是直接操作内存，所以速度相当快。如果数据库中的对应数据改变的之后，同步改变缓存中相应的数据即可！</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/26248221/1663848365679-a53121f1-751d-4214-a120-76568bd716ca.png" alt="img"></p>
+<p>3.2 高并发：</p>
+<p>直接操作缓存能够承受的请求是远远大于直接访问数据库的，所以我们可以考虑把数据库中的部分数据转移到缓存中去，这样用户的一部分请求会直接到缓存这里而不用经过数据库。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/26248221/1663848381147-8f886d7d-a44d-4c85-b70f-139a6bb1a5ab.png" alt="img"></p>
+<h3 id="4redis有哪些数据类型"><a class="markdownIt-Anchor" href="#4redis有哪些数据类型">#</a> 4.Redis 有哪些数据类型</h3>
+<p>Redis 主要有 5 种数据类型，包括 String，List，Set，Zset，Hash，满足大部分的使用要求</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/26248221/1663848586262-3596b121-8e53-4e89-934c-64a605b88c70.png" alt="img"></p>
+<p><a target="_blank" rel="noopener" href="http://t.csdn.cn/dhFOX">http://t.csdn.cn/dhFOX</a></p>
+<h3 id="5redis-常见的使用场景"><a class="markdownIt-Anchor" href="#5redis-常见的使用场景">#</a> 5.Redis 常见的使用场景</h3>
+<p>一、缓存</p>
+<p>作为 Key-Value 形态的内存数据库，Redis 最先会被想到的应用场景便是作为数据缓存。目前这几乎是所有中大型网站都在用的必杀技，合理的利用缓存不仅能够提升网站访问速度，还能大大降低数据库的压力，而使用 Redis 缓存数据也非常简单，只需要通过 string 类型将序列化后的对象存起来即可，不过也有一些需要注意的地方：</p>
+<p>（一）必须保证不同对象的 key 不会重复，并且使 key 尽量短，一般使用类名（表名）加主键拼接而成。</p>
+<p>（二）选择一个优秀的序列化方式也很重要，目的是提高序列化的效率和减少内存占用。</p>
+<p>（三）缓存内容与数据库的一致性，这里一般有两种做法：</p>
+<p>①只在数据库查询后将对象放入缓存，如果对象发生了修改或删除操作，直接清除对应缓存（或设为过期）。</p>
+<p>②在数据库新增和查询后将对象放入缓存，修改后更新缓存，删除后清除对应缓存（或设为过期）。</p>
+<p>二、排行榜</p>
+<p>很多网站目前都有排行榜的应用，如淘宝的年度 / 每日销量榜单、商品按时间的上新排行榜等。利用 Redis 的 zset 结构能实现各种复杂的排行榜应用。比如使用 zset 和一个计算热度的算法便可以轻松打造一个热度排行榜，zrevrangebyscore 可以得到以分数倒序排列的序列，zrank 可以得到一个成员在该排行榜的位置（是分数正序排列时的位置，如果要获取倒序排列时的位置需要用 zcard-zrank）。</p>
+<p>三、计数器</p>
+<p>什么是计数器，如文章的阅读量、微博点赞数、视频网站视频的播放数等。为了保证数据实时效，每次浏览都得给 + 1，并发量高时如果每次都请求数据库操作无疑是种挑战和压力。我们可以先写入 Redis 再定时同步到数据库，Redis 提供的 incr 命令来实现计数器功能，内存操作，性能非常好，非常适用于这些计数场景。</p>
+<p>计数功能应该是最适合 Redis 的使用场景之一了，因为它高频率读写的特征可以完全发挥 Redis 作为内存数据库的高效。在 Redis 的数据结构中，string、hash 和 sorted set 都提供了 incr 方法用于原子性的自增操作，下面举例说明一下它们各自的使用场景：</p>
+<p>（1）如果应用需要显示每天的注册用户数，便可以使用 string 作为计数器，设定一个名为 REGISTERED_COUNT_TODAY 的 key，并在初始化时给它设置一个到凌晨 0 点的过期时间，每当用户注册成功后便使用 incr 命令使该 key 增长 1，同时当每天凌晨 0 点后，这个计数器都会因为 key 过期使值清零。</p>
+<p>（2）每条微博都有点赞数、评论数、转发数和浏览数四条属性，这时用 hash 进行计数会更好，将该计数器的 key 设为 weibo:weibo_id，hash 的 field 为 like_number、comment_number、forward_number 和 view_number，在对应操作后通过 hincrby 使 hash 中的 field 自增。</p>
+<p>（3）如果应用有一个发帖排行榜的功能，选择 sorted set 更合适，将集合的 key 设为 POST_RANK。当用户发帖后，使用 zincrby 将该用户 id 的 score 增长 1。sorted set 会重新进行排序，用户所在排行榜的位置也就会得到实时的更新。</p>
+<p>四、限流</p>
+<p>在某些秒杀活动中，瞬间会有大量的用户请求涌入，而且大概率也会出现同一用户不断刷新页面或者其他操作来发送大量请求的情况，这时候我们就可以采取限流措施。那如何实现限流呢？我们可以利用 Redis 的 incr 方法，以访问者的 ip 和其他信息作为 key，访问一次增加一次计数，当同一用户的访问次数超过我们预先设定的次数则返回提示信息（比如提示用户操作过于频繁，一定时间之后再重新操作等等）。</p>
+<p>五、分布式会话</p>
+<p>集群模式下，在应用不多的情况下一般使用容器自带的 session 复制功能就能满足，当在应用增多且相对复杂的系统中，一般都会搭建以 Redis 等内存数据库为中心的 session 服务，session 不再由容器管理，而是由 session 服务及内存数据库管理。</p>
+<p>————————————————</p>
+<p>版权声明：本文为 CSDN 博主「努力努力再努力 c.」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51358164/article/details/125927452">https://blog.csdn.net/m0_51358164/article/details/125927452</a></p>
 
                 
             </div>
@@ -436,7 +472,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/10/01/hello-world/">http://example.com/2022/10/01/hello-world/</a>
+                    <a href="http://example.com/2022/10/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">http://example.com/2022/10/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -550,9 +586,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2022/10/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
                     <div class="card-image">
@@ -570,9 +607,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -581,6 +618,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -588,7 +626,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/10/01/hello-world/">
@@ -618,7 +656,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
