@@ -1,21 +1,95 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://example.com</id>
+    <id>https://tcy12.github.io/project</id>
     <title>我爱次包籽的blog</title>
-    <link href="http://example.com" />
-    <updated>2022-10-04T12:35:28.000Z</updated>
+    <link href="https://tcy12.github.io/project" />
+    <updated>2022-10-05T12:58:30.000Z</updated>
+    <category term="javaWeb" />
     <entry>
-        <id>http://example.com/2022/10/04/%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81/</id>
-        <title>演示代码</title>
-        <link rel="alternate" href="http://example.com/2022/10/04/%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81/"/>
-        <content type="html">&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;a&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello butterfly&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+        <id>https://tcy12.github.io/project/2022/10/05/%E4%BA%91%E6%97%A5%E8%AE%B0/</id>
+        <title>云日记</title>
+        <link rel="alternate" href="https://tcy12.github.io/project/2022/10/05/%E4%BA%91%E6%97%A5%E8%AE%B0/"/>
+        <content type="html">&lt;h1 id=&#34;云日记项目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#云日记项目&#34;&gt;#&lt;/a&gt; 云日记项目&lt;/h1&gt;
+&lt;h1 id=&#34;1项目介绍及环境搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1项目介绍及环境搭建&#34;&gt;#&lt;/a&gt; 1. 项目介绍及环境搭建&lt;/h1&gt;
+&lt;h2 id=&#34;11项目简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11项目简介&#34;&gt;#&lt;/a&gt; 1.1 项目简介&lt;/h2&gt;
+&lt;p&gt;云 R 记软件就是用于记录日常生活点滴。一款跨平台的简单快速的个人记事备忘工具，并且能够实现 PC、移动设备和云端之间的信息同步，简洁高效。将会议记录、日程安排、生活备忘，奇思妙想、快乐趣事以及任何突发灵感都可快速记录到系统中。&lt;/p&gt;
+&lt;h2 id=&#34;12技术选型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#12技术选型&#34;&gt;#&lt;/a&gt; 1.2 技术选型&lt;/h2&gt;
+&lt;p&gt;本系统采用 B/S 架构，使用 BootStrap + Jsp + Servlet + MySQL+ Tomcat 开发，使用 Maven 构建，采用 Junit 单元测试、Log4j 搭建日志、使用 POI 导入导出报表，操作 DB 使用 DBUtil。&lt;/p&gt;
+&lt;h2 id=&#34;13核心模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#13核心模块&#34;&gt;#&lt;/a&gt; 1.3 核心模块&lt;/h2&gt;
+&lt;p&gt;本项目包含用户模块、类型模块、云记模块、数据报表、首页模块这几个核心模块，核心主旨是掌握功能的分析以及前后台数据交互。&lt;/p&gt;
+&lt;h2 id=&#34;14具体功能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#14具体功能&#34;&gt;#&lt;/a&gt; 1.4 具体功能&lt;/h2&gt;
+&lt;h2 id=&#34;15技术细节&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#15技术细节&#34;&gt;#&lt;/a&gt; 1.5 技术细节&lt;/h2&gt;
+&lt;p&gt;增删改查&lt;br&gt;
+免登录：Session 和 Cookie&lt;br&gt;
+ 非法访问：过滤器 Filter&lt;br&gt;
+ 文件上传&lt;br&gt;
+分页&lt;br&gt;
+ Ajax：Dom 操作&lt;br&gt;
+富文本编辑器&lt;/p&gt;
+&lt;h2 id=&#34;16数据库设计&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#16数据库设计&#34;&gt;#&lt;/a&gt; 1.6 数据库设计&lt;/h2&gt;
+&lt;p&gt;用户表 类型表 云记表&lt;/p&gt;
+&lt;h2 id=&#34;17环境搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#17环境搭建&#34;&gt;#&lt;/a&gt; 1.7 环境搭建&lt;/h2&gt;
+&lt;h3 id=&#34;171新建项目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#171新建项目&#34;&gt;#&lt;/a&gt; 1.71 新建项目&lt;/h3&gt;
+&lt;p&gt;选择 “File” ——&amp;gt; “New” ——&amp;gt; “Project…” ，选择 “Maven”，设置 JDK 版本，选择 Maven Web 项目的模板&lt;/p&gt;
+&lt;h3 id=&#34;172设置项目信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#172设置项目信息&#34;&gt;#&lt;/a&gt; 1.72 设置项目信息&lt;/h3&gt;
+&lt;p&gt;设置项目的名称、存放的工作空间，以及对应的 GroupId&lt;/p&gt;
+&lt;h3 id=&#34;173修改配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#173修改配置&#34;&gt;#&lt;/a&gt; 1.73 修改配置&lt;/h3&gt;
+&lt;p&gt;在 pomx.xml 配置文件中，修改配置、添加依赖与插件&lt;/p&gt;
+&lt;h2 id=&#34;18maven导入的jar包&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#18maven导入的jar包&#34;&gt;#&lt;/a&gt; 1.8maven 导入的 jar 包&lt;/h2&gt;
+&lt;p&gt;junit 测试&lt;br&gt;
+ web servlet&lt;br&gt;
+log4j 日志打印相关的 jar&lt;br&gt;
+mysql 驱动包&lt;br&gt;
+ fastjson  json 依赖&lt;br&gt;
+ hutool 工具集&lt;br&gt;
+ commons-io 依赖&lt;br&gt;
+添加百度编辑器 ueditor 支持&lt;br&gt;
+ jstl 依赖&lt;br&gt;
+ servlet-api&lt;br&gt;
+lombok 插件 注解生成 getter-setter&lt;/p&gt;
+&lt;h2 id=&#34;19单元测试&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#19单元测试&#34;&gt;#&lt;/a&gt; 1.9 单元测试&lt;/h2&gt;
+&lt;p&gt;在 src/main 目录下，新建 test 目录（测试目录），新建 java 目录（测试源文件夹）&lt;/p&gt;
+&lt;p&gt;添加 @Test 对应测试方法可独立运行&lt;/p&gt;
+&lt;h2 id=&#34;1x配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1x配置文件&#34;&gt;#&lt;/a&gt; 1.x 配置文件&lt;/h2&gt;
+&lt;p&gt;在 src/main/resources 目录下，新建 log4j.properties 文件&lt;/p&gt;
+&lt;h2 id=&#34;2用户模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2用户模块&#34;&gt;#&lt;/a&gt; 2. 用户模块&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/deb2abc8-02c8-467c-ad78-019c70dab1f3?#&#34;&gt;https://www.yuque.com/docs/share/deb2abc8-02c8-467c-ad78-019c70dab1f3?#&lt;/a&gt; 《用户模块》&lt;/p&gt;
+&lt;p&gt;2.1 用户登录&lt;/p&gt;
+&lt;p&gt;2.2 用户退出&lt;/p&gt;
+&lt;p&gt;2.3 验证用户名的唯一性&lt;/p&gt;
+&lt;p&gt;2.4 加载头像&lt;/p&gt;
+&lt;p&gt;2.5 修改用户信息&lt;/p&gt;
+&lt;p&gt;2.6 非法访问拦截&lt;/p&gt;
+&lt;p&gt;2.7 免密登录&lt;/p&gt;
+&lt;h2 id=&#34;3类型模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3类型模块&#34;&gt;#&lt;/a&gt; 3. 类型模块&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/77a381bf-80e0-42f8-846c-e8e4f5eeb2bd?#&#34;&gt;https://www.yuque.com/docs/share/77a381bf-80e0-42f8-846c-e8e4f5eeb2bd?#&lt;/a&gt; 《云记类型》&lt;/p&gt;
+&lt;p&gt;3.1 查询类型的列表&lt;/p&gt;
+&lt;p&gt;3.2 验证类型名的唯一性&lt;/p&gt;
+&lt;p&gt;3.3 添加类型，修改类型&lt;/p&gt;
+&lt;p&gt;3.4 删除类型&lt;/p&gt;
+&lt;h2 id=&#34;4云记模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4云记模块&#34;&gt;#&lt;/a&gt; 4. 云记模块&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/01955cf2-bb23-4059-8e14-1ba665209533?#&#34;&gt;https://www.yuque.com/docs/share/01955cf2-bb23-4059-8e14-1ba665209533?#&lt;/a&gt; 《云记模块》&lt;/p&gt;
+&lt;p&gt;4.1 添加、修改云记&lt;/p&gt;
+&lt;p&gt;4.2 删除云记&lt;/p&gt;
+&lt;p&gt;4.3 分页查询云记列表&lt;/p&gt;
+&lt;p&gt;4.4 查询云记详情&lt;/p&gt;
+&lt;h2 id=&#34;5云记主页&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5云记主页&#34;&gt;#&lt;/a&gt; 5. 云记主页&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/4d1610f7-687b-4575-87a8-23a2bd19e491?#&#34;&gt;https://www.yuque.com/docs/share/4d1610f7-687b-4575-87a8-23a2bd19e491?#&lt;/a&gt; 《云记主页》&lt;/p&gt;
+&lt;p&gt;5.1 显示用户信息&lt;/p&gt;
+&lt;p&gt;5.2 分页查询云记列表&lt;/p&gt;
+&lt;p&gt;5.3 多条件查询云记列表&lt;/p&gt;
+&lt;h2 id=&#34;6数据报表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6数据报表&#34;&gt;#&lt;/a&gt; 6. 数据报表&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#&#34;&gt;https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#&lt;/a&gt; 《6 数据报表》&lt;/p&gt;
+&lt;p&gt;6.1 后端实现&lt;/p&gt;
+&lt;p&gt;6.2 前端&lt;/p&gt;
 </content>
-        <updated>2022-10-04T12:35:28.000Z</updated>
+        <category term="javaWeb" />
+        <updated>2022-10-05T12:58:30.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2022/10/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
-        <title>我的第一篇博客</title>
-        <link rel="alternate" href="http://example.com/2022/10/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+        <id>https://tcy12.github.io/project/2022/10/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
+        <title>redis简单介绍</title>
+        <link rel="alternate" href="https://tcy12.github.io/project/2022/10/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
         <content type="html">&lt;h3 id=&#34;1什么是redis&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1什么是redis&#34;&gt;#&lt;/a&gt; 1. 什么是 Redis&lt;/h3&gt;
 &lt;p&gt;Redis (Remote Dictionary Server) 是一个使用 C 语言编写的，开源的（BSD 许可）高性能非关系型（NoSQL）的键值对数据库。Redis 可以存储键和五种不同类型的值之间的映射。键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。与传统数据库不同的是 Redis 的数据是存在内存中的，所以读写速度非常快，因此 redis 被广泛应用于缓存方向，每秒可以处理超过 10 万次读写操作，是已知性能最快的 Key-Value DB。另外，Redis 也经常用来做分布式锁。除此之外，Redis 支持事务 、持久化、LUA 脚本、LRU 驱动事件、多种集群方案。&lt;/p&gt;
 &lt;h3 id=&#34;2redis有哪些优缺点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2redis有哪些优缺点&#34;&gt;#&lt;/a&gt; 2.Redis 有哪些优缺点&lt;/h3&gt;
@@ -69,9 +143,9 @@
         <updated>2022-10-04T08:43:51.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2022/10/01/hello-world/</id>
+        <id>https://tcy12.github.io/project/2022/10/01/hello-world/</id>
         <title>Hello World</title>
-        <link rel="alternate" href="http://example.com/2022/10/01/hello-world/"/>
+        <link rel="alternate" href="https://tcy12.github.io/project/2022/10/01/hello-world/"/>
         <content type="html">&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
 &lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
