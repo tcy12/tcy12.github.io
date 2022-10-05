@@ -88,9 +88,9 @@ lombok 插件 注解生成 getter-setter&lt;/p&gt;
         <updated>2022-10-05T12:58:30.000Z</updated>
     </entry>
     <entry>
-        <id>https://tcy12.github.io/project/2022/10/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
+        <id>https://tcy12.github.io/project/2022/10/04/redis%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</id>
         <title>redis简单介绍</title>
-        <link rel="alternate" href="https://tcy12.github.io/project/2022/10/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+        <link rel="alternate" href="https://tcy12.github.io/project/2022/10/04/redis%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
         <content type="html">&lt;h3 id=&#34;1什么是redis&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1什么是redis&#34;&gt;#&lt;/a&gt; 1. 什么是 Redis&lt;/h3&gt;
 &lt;p&gt;Redis (Remote Dictionary Server) 是一个使用 C 语言编写的，开源的（BSD 许可）高性能非关系型（NoSQL）的键值对数据库。Redis 可以存储键和五种不同类型的值之间的映射。键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。与传统数据库不同的是 Redis 的数据是存在内存中的，所以读写速度非常快，因此 redis 被广泛应用于缓存方向，每秒可以处理超过 10 万次读写操作，是已知性能最快的 Key-Value DB。另外，Redis 也经常用来做分布式锁。除此之外，Redis 支持事务 、持久化、LUA 脚本、LRU 驱动事件、多种集群方案。&lt;/p&gt;
 &lt;h3 id=&#34;2redis有哪些优缺点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2redis有哪些优缺点&#34;&gt;#&lt;/a&gt; 2.Redis 有哪些优缺点&lt;/h3&gt;
