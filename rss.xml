@@ -59,7 +59,7 @@ lombok 插件 注解生成 getter-setter&lt;/p&gt;
 &lt;h2 id=&#34;1x配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1x配置文件&#34;&gt;#&lt;/a&gt; 1.x 配置文件&lt;/h2&gt;
 &lt;p&gt;在 src/main/resources 目录下，新建 log4j.properties 文件&lt;/p&gt;
 &lt;h2 id=&#34;2用户模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2用户模块&#34;&gt;#&lt;/a&gt; 2. 用户模块&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/deb2abc8-02c8-467c-ad78-019c70dab1f3?#&#34;&gt;https://www.yuque.com/docs/share/deb2abc8-02c8-467c-ad78-019c70dab1f3?#&lt;/a&gt; 《用户模块》&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvZGViMmFiYzgtMDJjOC00NjdjLWFkNzgtMDE5YzcwZGFiMWYzPyM=&#34;&gt;https://www.yuque.com/docs/share/deb2abc8-02c8-467c-ad78-019c70dab1f3?#&lt;/span&gt; 《用户模块》&lt;/p&gt;
 &lt;p&gt;2.1 用户登录&lt;/p&gt;
 &lt;p&gt;2.2 用户退出&lt;/p&gt;
 &lt;p&gt;2.3 验证用户名的唯一性&lt;/p&gt;
@@ -68,24 +68,24 @@ lombok 插件 注解生成 getter-setter&lt;/p&gt;
 &lt;p&gt;2.6 非法访问拦截&lt;/p&gt;
 &lt;p&gt;2.7 免密登录&lt;/p&gt;
 &lt;h2 id=&#34;3类型模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3类型模块&#34;&gt;#&lt;/a&gt; 3. 类型模块&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/77a381bf-80e0-42f8-846c-e8e4f5eeb2bd?#&#34;&gt;https://www.yuque.com/docs/share/77a381bf-80e0-42f8-846c-e8e4f5eeb2bd?#&lt;/a&gt; 《云记类型》&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvNzdhMzgxYmYtODBlMC00MmY4LTg0NmMtZThlNGY1ZWViMmJkPyM=&#34;&gt;https://www.yuque.com/docs/share/77a381bf-80e0-42f8-846c-e8e4f5eeb2bd?#&lt;/span&gt; 《云记类型》&lt;/p&gt;
 &lt;p&gt;3.1 查询类型的列表&lt;/p&gt;
 &lt;p&gt;3.2 验证类型名的唯一性&lt;/p&gt;
 &lt;p&gt;3.3 添加类型，修改类型&lt;/p&gt;
 &lt;p&gt;3.4 删除类型&lt;/p&gt;
 &lt;h2 id=&#34;4云记模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4云记模块&#34;&gt;#&lt;/a&gt; 4. 云记模块&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/01955cf2-bb23-4059-8e14-1ba665209533?#&#34;&gt;https://www.yuque.com/docs/share/01955cf2-bb23-4059-8e14-1ba665209533?#&lt;/a&gt; 《云记模块》&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvMDE5NTVjZjItYmIyMy00MDU5LThlMTQtMWJhNjY1MjA5NTMzPyM=&#34;&gt;https://www.yuque.com/docs/share/01955cf2-bb23-4059-8e14-1ba665209533?#&lt;/span&gt; 《云记模块》&lt;/p&gt;
 &lt;p&gt;4.1 添加、修改云记&lt;/p&gt;
 &lt;p&gt;4.2 删除云记&lt;/p&gt;
 &lt;p&gt;4.3 分页查询云记列表&lt;/p&gt;
 &lt;p&gt;4.4 查询云记详情&lt;/p&gt;
 &lt;h2 id=&#34;5云记主页&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5云记主页&#34;&gt;#&lt;/a&gt; 5. 云记主页&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/4d1610f7-687b-4575-87a8-23a2bd19e491?#&#34;&gt;https://www.yuque.com/docs/share/4d1610f7-687b-4575-87a8-23a2bd19e491?#&lt;/a&gt; 《云记主页》&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvNGQxNjEwZjctNjg3Yi00NTc1LTg3YTgtMjNhMmJkMTllNDkxPyM=&#34;&gt;https://www.yuque.com/docs/share/4d1610f7-687b-4575-87a8-23a2bd19e491?#&lt;/span&gt; 《云记主页》&lt;/p&gt;
 &lt;p&gt;5.1 显示用户信息&lt;/p&gt;
 &lt;p&gt;5.2 分页查询云记列表&lt;/p&gt;
 &lt;p&gt;5.3 多条件查询云记列表&lt;/p&gt;
 &lt;h2 id=&#34;6数据报表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6数据报表&#34;&gt;#&lt;/a&gt; 6. 数据报表&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#&#34;&gt;https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#&lt;/a&gt; 《6 数据报表》&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvYjc0MDUzNTUtMzA1ZS00ZDllLTk2NzItNzdhNmM2Zjg3ODc3PyM=&#34;&gt;https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#&lt;/span&gt; 《6 数据报表》&lt;/p&gt;
 &lt;p&gt;6.1 后端实现&lt;/p&gt;
 &lt;p&gt;6.2 前端&lt;/p&gt;
  ]]></description>
@@ -117,7 +117,7 @@ lombok 插件 注解生成 getter-setter&lt;/p&gt;
 &lt;p&gt;直接操作缓存能够承受的请求是远远大于直接访问数据库的，所以我们可以考虑把数据库中的部分数据转移到缓存中去，这样用户的一部分请求会直接到缓存这里而不用经过数据库。&lt;/p&gt;
 &lt;h3 id=&#34;4redis有哪些数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4redis有哪些数据类型&#34;&gt;#&lt;/a&gt; 4.Redis 有哪些数据类型&lt;/h3&gt;
 &lt;p&gt;Redis 主要有 5 种数据类型，包括 String，List，Set，Zset，Hash，满足大部分的使用要求&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://t.csdn.cn/dhFOX&#34;&gt;http://t.csdn.cn/dhFOX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3QuY3Nkbi5jbi9kaEZPWA==&#34;&gt;http://t.csdn.cn/dhFOX&lt;/span&gt;&lt;/p&gt;
 &lt;h3 id=&#34;5redis-常见的使用场景&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5redis-常见的使用场景&#34;&gt;#&lt;/a&gt; 5.Redis 常见的使用场景&lt;/h3&gt;
 &lt;p&gt;一、缓存&lt;/p&gt;
 &lt;p&gt;作为 Key-Value 形态的内存数据库，Redis 最先会被想到的应用场景便是作为数据缓存。目前这几乎是所有中大型网站都在用的必杀技，合理的利用缓存不仅能够提升网站访问速度，还能大大降低数据库的压力，而使用 Redis 缓存数据也非常简单，只需要通过 string 类型将序列化后的对象存起来即可，不过也有一些需要注意的地方：&lt;/p&gt;
@@ -140,7 +140,7 @@ lombok 插件 注解生成 getter-setter&lt;/p&gt;
 &lt;p&gt;集群模式下，在应用不多的情况下一般使用容器自带的 session 复制功能就能满足，当在应用增多且相对复杂的系统中，一般都会搭建以 Redis 等内存数据库为中心的 session 服务，session 不再由容器管理，而是由 session 服务及内存数据库管理。&lt;/p&gt;
 &lt;p&gt;————————————————&lt;/p&gt;
 &lt;p&gt;版权声明：本文为 CSDN 博主「努力努力再努力 c.」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。&lt;/p&gt;
-&lt;p&gt;原文链接：&lt;a href=&#34;https://blog.csdn.net/m0_51358164/article/details/125927452&#34;&gt;https://blog.csdn.net/m0_51358164/article/details/125927452&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原文链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxMzU4MTY0L2FydGljbGUvZGV0YWlscy8xMjU5Mjc0NTI=&#34;&gt;https://blog.csdn.net/m0_51358164/article/details/125927452&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -148,20 +148,20 @@ lombok 插件 注解生成 getter-setter&lt;/p&gt;
             <title>Hello World</title>
             <link>https://tcy12.github.io/project/2022/10/01/hello-world/</link>
             <pubDate>Sat, 01 Oct 2022 13:46:36 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
 &lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/writing.html&#34;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
 &lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/server.html&#34;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
 &lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/generating.html&#34;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
 &lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
