@@ -5,18 +5,11 @@
         <link>https://tcy12.github.io</link>
         <description>这是用hexo+github创建的个人博客，主题使用的是butterfly</description>
         <language>zh_CN</language>
-        <pubDate>Wed, 12 Oct 2022 11:33:36 +0800</pubDate>
-        <lastBuildDate>Wed, 12 Oct 2022 11:33:36 +0800</lastBuildDate>
-        <category>redis</category>
+        <pubDate>Tue, 04 Oct 2022 16:43:51 +0800</pubDate>
+        <lastBuildDate>Tue, 04 Oct 2022 16:43:51 +0800</lastBuildDate>
         <category>javaWeb</category>
-        <item>
-            <guid isPermalink="true">https://tcy12.github.io/2022/10/12/spring/</guid>
-            <title>spring</title>
-            <link>https://tcy12.github.io/2022/10/12/spring/</link>
-            <category>redis</category>
-            <pubDate>Wed, 12 Oct 2022 11:33:36 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
-        </item>
+        <category>redis</category>
+        <category>spring</category>
         <item>
             <guid isPermalink="true">https://tcy12.github.io/2022/10/04/redis%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</guid>
             <title>redis简单介绍</title>

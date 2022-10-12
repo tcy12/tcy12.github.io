@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>我爱次包籽的blog • Posts by &#34;spring&#34; tag</title>
+        <link>https://tcy12.github.io</link>
+        <description>这是用hexo+github创建的个人博客，主题使用的是butterfly</description>
+        <language>zh_CN</language>
+        <pubDate>Wed, 12 Oct 2022 11:33:36 +0800</pubDate>
+        <lastBuildDate>Wed, 12 Oct 2022 11:33:36 +0800</lastBuildDate>
+        <category>javaWeb</category>
+        <category>redis</category>
+        <category>spring</category>
+        <item>
+            <guid isPermalink="true">https://tcy12.github.io/2022/10/12/spring/</guid>
+            <title>spring</title>
+            <link>https://tcy12.github.io/2022/10/12/spring/</link>
+            <category>spring</category>
+            <pubDate>Wed, 12 Oct 2022 11:33:36 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;spring笔记&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring笔记&#34;&gt;#&lt;/a&gt; Spring 笔记&lt;/h1&gt;
+&lt;h2 id=&#34;1springioc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1springioc&#34;&gt;#&lt;/a&gt; 1.SpringIOC&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/ad32e63d-d2fa-4277-b03b-338a2e802c91?#&#34;&gt;https://www.yuque.com/docs/share/ad32e63d-d2fa-4277-b03b-338a2e802c91?#&lt;/a&gt; 《Spring IOC》&lt;/p&gt;
+&lt;p&gt;1.1Spring 框架&lt;/p&gt;
+&lt;p&gt;1.2Spring IOC 容器 Bean 对象实例化模拟 (了解)&lt;/p&gt;
+&lt;p&gt;1.3Spring 配置文件加载&lt;/p&gt;
+&lt;p&gt;1.4Spring IOC 容器 Bean 对象实例化&lt;/p&gt;
+&lt;p&gt;1.5Spring IOC 手动装配（注入）&lt;/p&gt;
+&lt;p&gt;1.6Spring IOC 自动装配&lt;/p&gt;
+&lt;p&gt;1.7Spring IOC 扫描器&lt;/p&gt;
+&lt;p&gt;1.8Bean 的作用域与生命周期&lt;/p&gt;
+&lt;h2 id=&#34;2springaop&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2springaop&#34;&gt;#&lt;/a&gt; 2.SpringAOP&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/5394a511-0049-4f3f-b722-6199c7c7aa67?#&#34;&gt;https://www.yuque.com/docs/share/5394a511-0049-4f3f-b722-6199c7c7aa67?#&lt;/a&gt; 《Spring AOP》&lt;/p&gt;
+&lt;p&gt;2.1 代理模式&lt;/p&gt;
+&lt;p&gt;2…2 静态代理&lt;/p&gt;
+&lt;p&gt;2.3 动态代理&lt;/p&gt;
+&lt;p&gt;2.4Spring AOP&lt;/p&gt;
+&lt;p&gt;2.5Spring AOP 的实现&lt;/p&gt;
+&lt;p&gt;2.6Spring AOP 总结&lt;/p&gt;
+&lt;h2 id=&#34;3springjdbc事务控制&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3springjdbc事务控制&#34;&gt;#&lt;/a&gt; 3.SpringJDBC + 事务控制&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/50194fb7-0775-4166-8e56-be814e968836?#&#34;&gt;https://www.yuque.com/docs/share/50194fb7-0775-4166-8e56-be814e968836?#&lt;/a&gt; 《SpringJDBC + 事务控制》&lt;/p&gt;
+&lt;p&gt;3.1Spring 整合 JDBC 环境&lt;/p&gt;
+&lt;p&gt;3.2Spring 事务控制&lt;/p&gt;
+&lt;h2 id=&#34;4springmvc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4springmvc&#34;&gt;#&lt;/a&gt; 4.SpringMVC&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/a490e993-6b99-40bb-a314-f083563cb39d?#&#34;&gt;https://www.yuque.com/docs/share/a490e993-6b99-40bb-a314-f083563cb39d?#&lt;/a&gt; 《SpringMVC 基础》&lt;/p&gt;
+&lt;p&gt;4.1MVC 思想 和 SpringMvc 框架&lt;/p&gt;
+&lt;p&gt;4.2SpringMvc 请求流程&lt;/p&gt;
+&lt;p&gt;4.3Spring Mvc 环境搭建与测试&lt;/p&gt;
+&lt;p&gt;4.4URL 地址映射配置 &amp;amp; 参数绑定&lt;/p&gt;
+&lt;p&gt;4.5 请求转发与重定向的问题&lt;/p&gt;
+&lt;p&gt;4.6SpringMvc 之 Json 数据开发&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
