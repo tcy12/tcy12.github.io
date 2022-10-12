@@ -3,154 +3,9 @@
     <id>https://tcy12.github.io</id>
     <title>我爱次包籽的blog</title>
     <link href="https://tcy12.github.io" />
-    <updated>2022-10-08T12:34:29.000Z</updated>
-    <category term="spring" />
+    <updated>2022-10-05T12:58:30.000Z</updated>
     <category term="redis" />
     <category term="javaWeb" />
-    <entry>
-        <id>https://tcy12.github.io/2022/10/08/spring-ioc/</id>
-        <title>spring-ioc</title>
-        <link rel="alternate" href="https://tcy12.github.io/2022/10/08/spring-ioc/"/>
-        <content type="html">&lt;h2 id=&#34;1spring-框架&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1spring-框架&#34;&gt;#&lt;/a&gt; 1.Spring 框架&lt;/h2&gt;
-&lt;h3 id=&#34;111spring-框架概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#111spring-框架概念&#34;&gt;#&lt;/a&gt; 1.11&lt;strong&gt;Spring 框架概念&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;Spring 是众多开源 java 项目中的一员，基于分层的 javaEE 应用一站 式轻量级开源框架，主要核心是 IOC（控制反转 / 依赖注入）与 AOP（面向切面）两大技术，实现项目在开发过程中的轻松解耦， 提高项目的开发效率。&lt;/p&gt;
-&lt;h3 id=&#34;112-spring-源码架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#112-spring-源码架构&#34;&gt;#&lt;/a&gt; 1.12 &lt;strong&gt;Spring 源码架构&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;1. 核心容器：&lt;/p&gt;
-&lt;p&gt;Spring-beans 和 Spring-core 模块是 Spring 框架的核心模块，包含控制反转（Inversion of Control, IoC）和依赖注入（Dependency Injection, DI）, 核心容器提供 Spring 框架的基本功能。&lt;/p&gt;
-&lt;p&gt;1…1 核心容器的主要组件是 BeanFactory，工厂模式的实现。BeanFactory 使用控制反转（IOC） 思想将应用程序的配置和依赖性规范与实际的应用程序代码分开。&lt;/p&gt;
-&lt;p&gt;1.2 Spring 上下文 Spring Context：Spring 上下文是一个配置文件，向 Spring 框架提供上下文信息。Spring 上下文包括企业服务，例如 JNDI、EJB、电子邮件、国际化、校验和调度功能。&lt;/p&gt;
-&lt;p&gt;1.3 Spring-Expression 模块是统一表达式语言（unified EL）的扩展模块，可以查询、管理运行中的对象，同时也方便的可以调用对象方法、操作数组、集合等。它的语法类似于传统 EL，但提供了额外的功能，最出色的要数函数调用和简单字符串的模板函数。&lt;/p&gt;
-&lt;p&gt;2.Spring-AOP：&lt;/p&gt;
-&lt;p&gt;Spring-aop 是 Spring 的另一个核心模块，在 Spring 中，他是以 JVM 的动态代理技术为基础，然后设计出了一系列的 Aop 横切实现，比如前置通知、返回通知、异常通知等。通过其配置管理特性，Spring AOP 模块直接将面向切面的编程功能集成到了 Spring 框架中。所以，可以很容易地使 Spring 框架管理的任何对象支持 AOP。&lt;/p&gt;
-&lt;p&gt;\3. Spring Data Access (数据访问)：&lt;/p&gt;
-&lt;p&gt;由 Spring-jdbc、Spring-tx、Spring-orm、Spring-jms 和 Spring-oxm 5 个模块组成&lt;/p&gt;
-&lt;p&gt;3.1Spring-jdbc 模块是 Spring 提供的 JDBC 抽象框架的主要实现模块，用于简化 Spring JDBC。&lt;br&gt;
-3.2Spring-tx 模块是 SpringJDBC 事务控制实现模块。使用 Spring 框 架，它对事务做了很好的封装，通过它的 Aop 配置，可以灵活的 配置在任何一层。                                                                                                                      3.3Spring-Orm 模块是 ORM 框架支持模块，主要集成 hibernate, Java Persistence API (JPA) 和 Java Data Objects (JDO) 用于资 源管理、数据访问对象 (DAO) 的实现和事务策略。                                                            3.4Spring-Jms 模块（Java Messaging Service）能够发送和接受信息。                                                                  3.5Spring-Oxm 模块主要提供一个抽象层以支撑 OXM（OXM 是 Object-to-XML-Mapping 的缩写，它是一个 O/M-mapper，将 java 对象映射成 XML 数据，或者将 XML 数据映射成 java 对 象），例如：JAXB, Castor, XMLBeans, JiBX 和 XStream 等。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://4.Web&#34;&gt;4.Web&lt;/a&gt; 模块：&lt;/p&gt;
-&lt;p&gt;由 Spring-web、Spring-webmvc、Spring-websocket 和 Spring-webmvc-portlet 4 个模块组成，Web 上下&lt;br&gt;
-文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文。Web 模块还简化了处理多部分请求以及将请求参数绑定到域对象的工作。&lt;/p&gt;
-&lt;p&gt;5. 报文发送：&lt;/p&gt;
-&lt;p&gt;Spring-messaging 模块。Spring-messaging 是 Spring4 新加入的一个模块，主要职责是为 Spring 框架集成一些基础的报文传送应用。&lt;/p&gt;
-&lt;p&gt;6. 单元测试：&lt;/p&gt;
-&lt;p&gt;Spring-test 模块。Spring-test 模块主要为测试提供支持&lt;/p&gt;
-&lt;h3 id=&#34;113spring-框架环境搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#113spring-框架环境搭建&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.13Spring 框架环境搭建&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;重要的点&lt;/p&gt;
-&lt;h4 id=&#34;1添加-spring-框架的依赖坐标&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1添加-spring-框架的依赖坐标&#34;&gt;#&lt;/a&gt; 1. 添加 Spring 框架的依赖坐标&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665221631008-f48d52fd-03a1-4bb8-a50b-ff15cdfd214d.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;2添加spring-配置文件springxml拷贝官-网文档提供的模板内容到-xml-中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2添加spring-配置文件springxml拷贝官-网文档提供的模板内容到-xml-中&#34;&gt;#&lt;/a&gt; 2. 添加 Spring 配置文件（spring.xml）, 拷贝官 网文档提供的模板内容到 xml 中。&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665221806317-422fe846-0dd5-4476-8a1a-425e375cd552.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;3配置-bean-到-xml-中把对应-bean-纳入到-spring-容器来管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3配置-bean-到-xml-中把对应-bean-纳入到-spring-容器来管理&#34;&gt;#&lt;/a&gt; 3. 配置 bean 到 xml 中，把对应 bean 纳入到 Spring 容器来管理&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665221824191-1d929ab7-3a30-4a1d-aab3-175bfe01fdd5.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;4加载配置文件获取实例化对象&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4加载配置文件获取实例化对象&#34;&gt;#&lt;/a&gt; 4. 加载配置文件，获取实例化对象&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665221724576-003cc342-8c0f-4853-a5d6-40941868a417.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;2spring-ioc容器bean对象实例化模拟了解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2spring-ioc容器bean对象实例化模拟了解&#34;&gt;#&lt;/a&gt; 2.&lt;strong&gt;Spring IOC 容器 Bean 对象实例化模拟 (了解)&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;2.1 定义 Bean 属性对象&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665222324107-34bba415-3105-4921-8cd0-b0c94f649e69.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;2.2 添加 dom4j 坐标依赖&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665222359384-ae8becde-bd0e-49ce-b0e0-923c60f41b52.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;2.3 准备自定义配置文件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665222416685-e1cd3817-715f-49d4-befa-33603c8970e8.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;2.4 定义 Bean 工厂接口&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665222449100-2f187ec4-f2f7-457a-b9f7-917b373cac3f.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;2.5 定义 Bean 接口的实现类&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/attachments/yuque/0/2022/java/26248221/1665222643302-eeb3e3a6-9200-4bf5-8871-a8254b75af17.java&#34;&gt;📎MyClassPathXmlApplicationContext.java&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2.6 测试自定义 IOC 容器&lt;/p&gt;
-&lt;h2 id=&#34;3-spring-配置文件加载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-spring-配置文件加载&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;Spring 配置文件加载&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;31根据相对路径加载资源最常用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#31根据相对路径加载资源最常用&#34;&gt;#&lt;/a&gt; 3.1 根据相对路径加载资源（最常用）&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665223051864-1f4f4e54-6db6-4776-b8e0-ec7e3c9ea99d.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;3.2 根据绝对路径加载资源（了解）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665223062429-af64d946-0665-45a6-b73c-4d80d355756a.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;33-spring-多配置文件加载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#33-spring-多配置文件加载&#34;&gt;#&lt;/a&gt; 3.3 Spring 多配置文件加载&lt;/h3&gt;
-&lt;h4 id=&#34;331可变参数传入多个文件名&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#331可变参数传入多个文件名&#34;&gt;#&lt;/a&gt; 3.31 可变参数，传入多个文件名&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665222985580-8a35e9ad-015e-4260-911f-dcd277854445.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;332通过总的配置文件import其他配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#332通过总的配置文件import其他配置文件&#34;&gt;#&lt;/a&gt; 3.32 通过总的配置文件 import 其他配置文件&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665222999304-80850582-c1e5-44e5-8890-621d5b974e46.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;4spring-ioc-容器-bean-对象实例化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4spring-ioc-容器-bean-对象实例化&#34;&gt;#&lt;/a&gt; 4.&lt;strong&gt;Spring IOC 容器 Bean 对象实例化&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;41构造器实例化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#41构造器实例化&#34;&gt;#&lt;/a&gt; 4.1 构造器实例化&lt;/h3&gt;
-&lt;p&gt;注意：通过默认构造器创建 空构造方法必须存在 否则创建失败&lt;/p&gt;
-&lt;h3 id=&#34;42静态工厂实例化了解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#42静态工厂实例化了解&#34;&gt;#&lt;/a&gt; 4.2 静态工厂实例化（了解）&lt;/h3&gt;
-&lt;h4 id=&#34;421定义静态工厂类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#421定义静态工厂类&#34;&gt;#&lt;/a&gt; 4.21 定义静态工厂类&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665226796464-bcc108cc-b735-461b-9ec5-d3a8b9017bf6.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;422设置配置文件-springxml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#422设置配置文件-springxml&#34;&gt;#&lt;/a&gt; 4.22 设置配置文件 spring.xml&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665226720396-cfcd0982-12b8-4d05-99f0-add5c7f7e485.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;423获取实例化对象&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#423获取实例化对象&#34;&gt;#&lt;/a&gt; 4.23 获取实例化对象&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665228519282-24bb3a7e-7671-4928-bedb-4e9e66f77798.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;43实例化工厂实例化了解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#43实例化工厂实例化了解&#34;&gt;#&lt;/a&gt; 4.3 实例化工厂实例化（了解）&lt;/h3&gt;
-&lt;h2 id=&#34;5spring-ioc-手动装配注入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5spring-ioc-手动装配注入&#34;&gt;#&lt;/a&gt; 5.Spring IOC 手动装配（注入）&lt;/h2&gt;
-&lt;h3 id=&#34;51set方法注入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#51set方法注入&#34;&gt;#&lt;/a&gt; 5.1set 方法注入&lt;/h3&gt;
-&lt;h4 id=&#34;511业务对象-javabean&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#511业务对象-javabean&#34;&gt;#&lt;/a&gt; 5.11 业务对象 JavaBean&lt;/h4&gt;
-&lt;h4 id=&#34;512常用对象和基本类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#512常用对象和基本类型&#34;&gt;#&lt;/a&gt; 5.12 常用对象和基本类型&lt;/h4&gt;
-&lt;h4 id=&#34;513集合类型和属性对象&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#513集合类型和属性对象&#34;&gt;#&lt;/a&gt; 5.13 集合类型和属性对象&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665228976393-88bff235-f646-4874-86ac-d47707f22698.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665229022850-c168b583-cdeb-4909-8d33-7dc9afc714ba.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;52构造器注入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#52构造器注入&#34;&gt;#&lt;/a&gt; 5.2&lt;strong&gt; 构造器注入&lt;/strong&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;521如何使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#521如何使用&#34;&gt;#&lt;/a&gt; 5.21 如何使用&lt;/h4&gt;
-&lt;p&gt;注意：提供带参构造器&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665229519391-617c49ac-ad21-4a05-adc6-2c6927e797c4.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;使用&lt;strong&gt; constructor-arg 标签&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665229574832-36b4cde7-4098-4d59-8748-18a7dfc87123.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;522循环依赖问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#522循环依赖问题&#34;&gt;#&lt;/a&gt; 5.22&lt;strong&gt; 循环依赖问题&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;5.221 循环问题产生的原因：&lt;/p&gt;
-&lt;p&gt;Bean 通过构造器注入，之间彼此相互依赖对方导致 bean 无法实例 化。&lt;/p&gt;
-&lt;p&gt;5.222 解决方案：&lt;/p&gt;
-&lt;p&gt;将构造器注入改为 set 方法注入&lt;/p&gt;
-&lt;p&gt;5.3 静态工厂注入（了解）&lt;/p&gt;
-&lt;p&gt;5.4 实例化工厂注入（了解）&lt;/p&gt;
-&lt;h3 id=&#34;55p名称空间的使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#55p名称空间的使用&#34;&gt;#&lt;/a&gt; 5.5p 名称空间的使用&lt;/h3&gt;
-&lt;p&gt;spring2.5 以后，为了简化 setter 方法属性注入，引用 p 名称空间的概念，可以将 子元素，简化为元素属性配置。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;属性字段提供 set 方法&lt;/li&gt;
-&lt;li&gt;在配置文件 spring.xml 引入 p 名称空间&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665231432178-fe0b1bca-b80c-4d01-b7d0-07140fef6373.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665231473622-5a167d9a-56b3-4b2b-b133-f91efb10170a.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;6-spring-ioc-自动装配&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6-spring-ioc-自动装配&#34;&gt;#&lt;/a&gt; 6. &lt;strong&gt;Spring IOC 自动装配&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;61注解方式注入-bean&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#61注解方式注入-bean&#34;&gt;#&lt;/a&gt; 6.1 注解方式注入 Bean&lt;/h3&gt;
-&lt;p&gt;对于 bean 的注入，除了使用 xml 配置以外，可以使用注解配置。 注解的配置，可以简化配置文件，提高开发的速度，使程序看上去 更简洁。对于注解的解释，Spring 对于注解有专门的解释器，对定&lt;/p&gt;
-&lt;p&gt;义的注解进行解析，实现对应 bean 对象的注入。通过&lt;strong&gt;反射技术实 现&lt;/strong&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;62准备环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#62准备环境&#34;&gt;#&lt;/a&gt; 6.2&lt;strong&gt; 准备环境&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;6.21 修改配置文件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665230880043-0c3c41b9-4476-427d-87c5-32670497eaf2.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;6.22 开启自动化注入&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665230894873-c9c2e236-2115-40f8-907e-13d79344d7a3.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;6.23. 给注入的 bean 对象添加注解&lt;/p&gt;
-&lt;h3 id=&#34;63resource注解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#63resource注解&#34;&gt;#&lt;/a&gt; 6.3@Resource 注解&lt;/h3&gt;
-&lt;p&gt;@Resource 注解实现自动注入 （反射）&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;注解默认通过属性字段名称查找对应的 bean 对象（属性字段名称与 bean 标签的 id 属性值一致）&lt;/li&gt;
-&lt;li&gt;如果属性字段名称不一样，则会通过类型（Class）类型&lt;/li&gt;
-&lt;li&gt;属性字段可以提供 set 方法 也可以不提供&lt;/li&gt;
-&lt;li&gt;注解可以声明在属性字段上 或 set 方法级别&lt;/li&gt;
-&lt;li&gt;可以设置注解的 name 属性，name 属性值要与 bean 标签的 id 属性值一致（如果设置了 name 属性，则会按照 name 属性查询 bean 对象）&lt;/li&gt;
-&lt;li&gt;当注入接口时，如果接口只有一个实现类，则正常实例化；如果接口有多个实现类，则需要使用 name 属性指定需要被实例化的 bean 对象&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;64autowired注解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#64autowired注解&#34;&gt;#&lt;/a&gt; 6.4**@Autowired 注解 **&lt;/h3&gt;
-&lt;p&gt;@Autowired 注解实现自动化注入&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;注解默认使用类型（Class 类型）查找 bean 对象，与属性字段名称没有关系&lt;/li&gt;
-&lt;li&gt;属性字段可以提供 set 方法 也可以不提供&lt;/li&gt;
-&lt;li&gt;注解可以声明在属性级别 或 set 方法级别&lt;/li&gt;
-&lt;li&gt;如果想要通过指定名称查找 bean 对象，需要结合 @Qualifier 使用（通过设置 value 属性值查找，value 属性值要 bean 标签的 id 属性值保持一致）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;7-spring-ioc-扫描器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7-spring-ioc-扫描器&#34;&gt;#&lt;/a&gt; 7. &lt;strong&gt;Spring IOC 扫描器&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;实际的开发中，bean 的数量非常多，采用手动配置 bean 的方式已 无法满足生产需要，Spring 这时候同样提供了扫描的方式，对扫描 到的 bean 对象的统一管理，简化开发配置，提高开发效率。&lt;/p&gt;
-&lt;h3 id=&#34;71-设置自动化扫描的范围&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#71-设置自动化扫描的范围&#34;&gt;#&lt;/a&gt; 7.1. 设置自动化扫描的范围&lt;/h3&gt;
-&lt;p&gt;如果 bean 对象未在扫描范围范围，即使声明了注解，也不会被实例化&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.nlark.com/yuque/0/2022/png/26248221/1665231633125-bb045757-f35c-4e42-9773-63646b7ce0d5.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;72需要被实例化的javabean的类上添加指定的注解注解声明在类级别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#72需要被实例化的javabean的类上添加指定的注解注解声明在类级别&#34;&gt;#&lt;/a&gt; 7.2 需要被实例化的 JavaBean 的类上添加指定的注解（注解声明在类级别）&lt;/h3&gt;
-&lt;p&gt;（ben 对象的 id 属性默认是 类的首字母小写）&lt;/p&gt;
-&lt;p&gt;Dao 层：&lt;br&gt;
-@Repository&lt;br&gt;
-Service 层：&lt;br&gt;
-@Service&lt;br&gt;
-Controller 层：&lt;br&gt;
-@Controller&lt;br&gt;
- 任意类：&lt;br&gt;
-@Component&lt;/p&gt;
-</content>
-        <category term="spring" />
-        <updated>2022-10-08T12:34:29.000Z</updated>
-    </entry>
     <entry>
         <id>https://tcy12.github.io/2022/10/05/%E4%BA%91%E6%97%A5%E8%AE%B0/</id>
         <title>云日记</title>
@@ -229,6 +84,8 @@ lombok 插件 注解生成 getter-setter&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#&#34;&gt;https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#&lt;/a&gt; 《6 数据报表》&lt;/p&gt;
 &lt;p&gt;6.1 后端实现&lt;/p&gt;
 &lt;p&gt;6.2 前端&lt;/p&gt;
+&lt;h2 id=&#34;7项目面试题demo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7项目面试题demo&#34;&gt;#&lt;/a&gt; 7. 项目面试题（demo）&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/docs/share/f0a04126-d30f-4acb-86a4-9f328119c0e5?#&#34;&gt;https://www.yuque.com/docs/share/f0a04126-d30f-4acb-86a4-9f328119c0e5?#&lt;/a&gt; 《项目面试题（demo）》&lt;/p&gt;
 </content>
         <category term="javaWeb" />
         <updated>2022-10-05T12:58:30.000Z</updated>
