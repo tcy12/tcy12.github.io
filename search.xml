@@ -1,269 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/10/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start">#</a> Quick Start</h2>
-<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post">#</a> Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server">#</a> Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files">#</a> Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites">#</a> Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>redis简单介绍</title>
-    <url>/2022/10/04/redis%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</url>
-    <content><![CDATA[<h3 id="1什么是redis"><a class="markdownIt-Anchor" href="#1什么是redis">#</a> 1. 什么是 Redis</h3>
-<p>Redis (Remote Dictionary Server) 是一个使用 C 语言编写的，开源的（BSD 许可）高性能非关系型（NoSQL）的键值对数据库。Redis 可以存储键和五种不同类型的值之间的映射。键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。与传统数据库不同的是 Redis 的数据是存在内存中的，所以读写速度非常快，因此 redis 被广泛应用于缓存方向，每秒可以处理超过 10 万次读写操作，是已知性能最快的 Key-Value DB。另外，Redis 也经常用来做分布式锁。除此之外，Redis 支持事务 、持久化、LUA 脚本、LRU 驱动事件、多种集群方案。</p>
-<h3 id="2redis有哪些优缺点"><a class="markdownIt-Anchor" href="#2redis有哪些优缺点">#</a> 2.Redis 有哪些优缺点</h3>
-<p>优点:</p>
-<p>2.1 读写性能优异， Redis 能读的速度是 110000 次 /s，写的速度是 81000 次 /s。</p>
-<p>2.2 支持数据持久化，支持 AOF 和 RDB 两种持久化方式。</p>
-<p>2.3 支持事务，Redis 的所有操作都是原子性的，同时 Redis 还支持对几个操作合并后的原子性执行。</p>
-<p>2.4 数据结构丰富，除了支持 string 类型的 value 外还支持 hash、set、zset、list 等数据结构。</p>
-<p>2.5 支持主从复制，主机会自动将数据同步到从机，可以进行读写分离。</p>
-<p>缺点:</p>
-<p>2.1 数据库容量受到物理内存的限制，不能用作海量数据的高性能读写，因此 Redis 适合的场景主要局限在较小数据量的高性能操作和运算上。</p>
-<p>2.2Redis 不具备自动容错和恢复功能，主机从机的宕机都会导致前端部分读写请求失败，需要等待机器重启或者手动切换前端的 IP 才能恢复。</p>
-<p>2.3 主机宕机，宕机前有部分数据未能及时同步到从机，切换 IP 后还会引入数据不一致的问题，降低了系统的可用性。</p>
-<p>2.4Redis 较难支持在线扩容，在集群容量达到上限时在线扩容会变得很复杂。为避免这一问题，运维人员在系统上线时必须确保有足够的空间，这对资源造成了很大的浪费。</p>
-<p>为什么要用 Redis / 为什么要用缓存</p>
-<h3 id="3为什么要用-redis-为什么要用缓存"><a class="markdownIt-Anchor" href="#3为什么要用-redis-为什么要用缓存">#</a> 3. 为什么要用 Redis / 为什么要用缓存</h3>
-<p>3.1 高性能：</p>
-<p>假如用户第一次访问数据库中的某些数据。这个过程会比较慢，因为是从硬盘上读取的。将该用户访问的数据存在数缓存中，这样下一次再访问这些数据的时候就可以直接从缓存中获取了。操作缓存就是直接操作内存，所以速度相当快。如果数据库中的对应数据改变的之后，同步改变缓存中相应的数据即可！</p>
-<p>3.2 高并发：</p>
-<p>直接操作缓存能够承受的请求是远远大于直接访问数据库的，所以我们可以考虑把数据库中的部分数据转移到缓存中去，这样用户的一部分请求会直接到缓存这里而不用经过数据库。</p>
-<h3 id="4redis有哪些数据类型"><a class="markdownIt-Anchor" href="#4redis有哪些数据类型">#</a> 4.Redis 有哪些数据类型</h3>
-<p>Redis 主要有 5 种数据类型，包括 String，List，Set，Zset，Hash，满足大部分的使用要求</p>
-<p><a href="http://t.csdn.cn/dhFOX">http://t.csdn.cn/dhFOX</a></p>
-<h3 id="5redis-常见的使用场景"><a class="markdownIt-Anchor" href="#5redis-常见的使用场景">#</a> 5.Redis 常见的使用场景</h3>
-<p>一、缓存</p>
-<p>作为 Key-Value 形态的内存数据库，Redis 最先会被想到的应用场景便是作为数据缓存。目前这几乎是所有中大型网站都在用的必杀技，合理的利用缓存不仅能够提升网站访问速度，还能大大降低数据库的压力，而使用 Redis 缓存数据也非常简单，只需要通过 string 类型将序列化后的对象存起来即可，不过也有一些需要注意的地方：</p>
-<p>（一）必须保证不同对象的 key 不会重复，并且使 key 尽量短，一般使用类名（表名）加主键拼接而成。</p>
-<p>（二）选择一个优秀的序列化方式也很重要，目的是提高序列化的效率和减少内存占用。</p>
-<p>（三）缓存内容与数据库的一致性，这里一般有两种做法：</p>
-<p>①只在数据库查询后将对象放入缓存，如果对象发生了修改或删除操作，直接清除对应缓存（或设为过期）。</p>
-<p>②在数据库新增和查询后将对象放入缓存，修改后更新缓存，删除后清除对应缓存（或设为过期）。</p>
-<p>二、排行榜</p>
-<p>很多网站目前都有排行榜的应用，如淘宝的年度 / 每日销量榜单、商品按时间的上新排行榜等。利用 Redis 的 zset 结构能实现各种复杂的排行榜应用。比如使用 zset 和一个计算热度的算法便可以轻松打造一个热度排行榜，zrevrangebyscore 可以得到以分数倒序排列的序列，zrank 可以得到一个成员在该排行榜的位置（是分数正序排列时的位置，如果要获取倒序排列时的位置需要用 zcard-zrank）。</p>
-<p>三、计数器</p>
-<p>什么是计数器，如文章的阅读量、微博点赞数、视频网站视频的播放数等。为了保证数据实时效，每次浏览都得给 + 1，并发量高时如果每次都请求数据库操作无疑是种挑战和压力。我们可以先写入 Redis 再定时同步到数据库，Redis 提供的 incr 命令来实现计数器功能，内存操作，性能非常好，非常适用于这些计数场景。</p>
-<p>计数功能应该是最适合 Redis 的使用场景之一了，因为它高频率读写的特征可以完全发挥 Redis 作为内存数据库的高效。在 Redis 的数据结构中，string、hash 和 sorted set 都提供了 incr 方法用于原子性的自增操作，下面举例说明一下它们各自的使用场景：</p>
-<p>（1）如果应用需要显示每天的注册用户数，便可以使用 string 作为计数器，设定一个名为 REGISTERED_COUNT_TODAY 的 key，并在初始化时给它设置一个到凌晨 0 点的过期时间，每当用户注册成功后便使用 incr 命令使该 key 增长 1，同时当每天凌晨 0 点后，这个计数器都会因为 key 过期使值清零。</p>
-<p>（2）每条微博都有点赞数、评论数、转发数和浏览数四条属性，这时用 hash 进行计数会更好，将该计数器的 key 设为 weibo:weibo_id，hash 的 field 为 like_number、comment_number、forward_number 和 view_number，在对应操作后通过 hincrby 使 hash 中的 field 自增。</p>
-<p>（3）如果应用有一个发帖排行榜的功能，选择 sorted set 更合适，将集合的 key 设为 POST_RANK。当用户发帖后，使用 zincrby 将该用户 id 的 score 增长 1。sorted set 会重新进行排序，用户所在排行榜的位置也就会得到实时的更新。</p>
-<p>四、限流</p>
-<p>在某些秒杀活动中，瞬间会有大量的用户请求涌入，而且大概率也会出现同一用户不断刷新页面或者其他操作来发送大量请求的情况，这时候我们就可以采取限流措施。那如何实现限流呢？我们可以利用 Redis 的 incr 方法，以访问者的 ip 和其他信息作为 key，访问一次增加一次计数，当同一用户的访问次数超过我们预先设定的次数则返回提示信息（比如提示用户操作过于频繁，一定时间之后再重新操作等等）。</p>
-<p>五、分布式会话</p>
-<p>集群模式下，在应用不多的情况下一般使用容器自带的 session 复制功能就能满足，当在应用增多且相对复杂的系统中，一般都会搭建以 Redis 等内存数据库为中心的 session 服务，session 不再由容器管理，而是由 session 服务及内存数据库管理。</p>
-<p>————————————————</p>
-<p>版权声明：本文为 CSDN 博主「努力努力再努力 c.」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。</p>
-<p>原文链接：<a href="https://blog.csdn.net/m0_51358164/article/details/125927452">https://blog.csdn.net/m0_51358164/article/details/125927452</a></p>
-]]></content>
-      <tags>
-        <tag>redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>云日记</title>
-    <url>/2022/10/05/%E4%BA%91%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="云日记项目"><a class="markdownIt-Anchor" href="#云日记项目">#</a> 云日记项目</h1>
-<h1 id="1项目介绍及环境搭建"><a class="markdownIt-Anchor" href="#1项目介绍及环境搭建">#</a> 1. 项目介绍及环境搭建</h1>
-<h2 id="11项目简介"><a class="markdownIt-Anchor" href="#11项目简介">#</a> 1.1 项目简介</h2>
-<p>云 R 记软件就是用于记录日常生活点滴。一款跨平台的简单快速的个人记事备忘工具，并且能够实现 PC、移动设备和云端之间的信息同步，简洁高效。将会议记录、日程安排、生活备忘，奇思妙想、快乐趣事以及任何突发灵感都可快速记录到系统中。</p>
-<h2 id="12技术选型"><a class="markdownIt-Anchor" href="#12技术选型">#</a> 1.2 技术选型</h2>
-<p>本系统采用 B/S 架构，使用 BootStrap + Jsp + Servlet + MySQL+ Tomcat 开发，使用 Maven 构建，采用 Junit 单元测试、Log4j 搭建日志、使用 POI 导入导出报表，操作 DB 使用 DBUtil。</p>
-<h2 id="13核心模块"><a class="markdownIt-Anchor" href="#13核心模块">#</a> 1.3 核心模块</h2>
-<p>本项目包含用户模块、类型模块、云记模块、数据报表、首页模块这几个核心模块，核心主旨是掌握功能的分析以及前后台数据交互。</p>
-<h2 id="14具体功能"><a class="markdownIt-Anchor" href="#14具体功能">#</a> 1.4 具体功能</h2>
-<h2 id="15技术细节"><a class="markdownIt-Anchor" href="#15技术细节">#</a> 1.5 技术细节</h2>
-<p>增删改查<br>
-免登录：Session 和 Cookie<br>
- 非法访问：过滤器 Filter<br>
- 文件上传<br>
-分页<br>
- Ajax：Dom 操作<br>
-富文本编辑器</p>
-<h2 id="16数据库设计"><a class="markdownIt-Anchor" href="#16数据库设计">#</a> 1.6 数据库设计</h2>
-<p>用户表 类型表 云记表</p>
-<h2 id="17环境搭建"><a class="markdownIt-Anchor" href="#17环境搭建">#</a> 1.7 环境搭建</h2>
-<h3 id="171新建项目"><a class="markdownIt-Anchor" href="#171新建项目">#</a> 1.71 新建项目</h3>
-<p>选择 “File” ——&gt; “New” ——&gt; “Project…” ，选择 “Maven”，设置 JDK 版本，选择 Maven Web 项目的模板</p>
-<h3 id="172设置项目信息"><a class="markdownIt-Anchor" href="#172设置项目信息">#</a> 1.72 设置项目信息</h3>
-<p>设置项目的名称、存放的工作空间，以及对应的 GroupId</p>
-<h3 id="173修改配置"><a class="markdownIt-Anchor" href="#173修改配置">#</a> 1.73 修改配置</h3>
-<p>在 pomx.xml 配置文件中，修改配置、添加依赖与插件</p>
-<h2 id="18maven导入的jar包"><a class="markdownIt-Anchor" href="#18maven导入的jar包">#</a> 1.8maven 导入的 jar 包</h2>
-<p>junit 测试<br>
- web servlet<br>
-log4j 日志打印相关的 jar<br>
-mysql 驱动包<br>
- fastjson  json 依赖<br>
- hutool 工具集<br>
- commons-io 依赖<br>
-添加百度编辑器 ueditor 支持<br>
- jstl 依赖<br>
- servlet-api<br>
-lombok 插件 注解生成 getter-setter</p>
-<h2 id="19单元测试"><a class="markdownIt-Anchor" href="#19单元测试">#</a> 1.9 单元测试</h2>
-<p>git config --global --unset https.proxy<br>
- 在 src/main 目录下，新建 test 目录（测试目录），新建 java 目录（测试源文件夹）</p>
-<p>添加 @Test 对应测试方法可独立运行</p>
-<h2 id="1x配置文件"><a class="markdownIt-Anchor" href="#1x配置文件">#</a> 1.x 配置文件</h2>
-<p>在 src/main/resources 目录下，新建 log4j.properties 文件</p>
-<h2 id="2用户模块"><a class="markdownIt-Anchor" href="#2用户模块">#</a> 2. 用户模块</h2>
-<p><a href="https://www.yuque.com/docs/share/deb2abc8-02c8-467c-ad78-019c70dab1f3?#">https://www.yuque.com/docs/share/deb2abc8-02c8-467c-ad78-019c70dab1f3?#</a> 《用户模块》</p>
-<p>2.1 用户登录</p>
-<p>2.2 用户退出</p>
-<p>2.3 验证用户名的唯一性</p>
-<p>2.4 加载头像</p>
-<p>2.5 修改用户信息</p>
-<p>2.6 非法访问拦截</p>
-<p>2.7 免密登录</p>
-<h2 id="3类型模块"><a class="markdownIt-Anchor" href="#3类型模块">#</a> 3. 类型模块</h2>
-<p><a href="https://www.yuque.com/docs/share/77a381bf-80e0-42f8-846c-e8e4f5eeb2bd?#">https://www.yuque.com/docs/share/77a381bf-80e0-42f8-846c-e8e4f5eeb2bd?#</a> 《云记类型》</p>
-<p>3.1 查询类型的列表</p>
-<p>3.2 验证类型名的唯一性</p>
-<p>3.3 添加类型，修改类型</p>
-<p>3.4 删除类型</p>
-<h2 id="4云记模块"><a class="markdownIt-Anchor" href="#4云记模块">#</a> 4. 云记模块</h2>
-<p><a href="https://www.yuque.com/docs/share/01955cf2-bb23-4059-8e14-1ba665209533?#">https://www.yuque.com/docs/share/01955cf2-bb23-4059-8e14-1ba665209533?#</a> 《云记模块》</p>
-<p>4.1 添加、修改云记</p>
-<p>4.2 删除云记</p>
-<p>4.3 分页查询云记列表</p>
-<p>4.4 查询云记详情</p>
-<h2 id="5云记主页"><a class="markdownIt-Anchor" href="#5云记主页">#</a> 5. 云记主页</h2>
-<p><a href="https://www.yuque.com/docs/share/4d1610f7-687b-4575-87a8-23a2bd19e491?#">https://www.yuque.com/docs/share/4d1610f7-687b-4575-87a8-23a2bd19e491?#</a> 《云记主页》</p>
-<p>5.1 显示用户信息</p>
-<p>5.2 分页查询云记列表</p>
-<p>5.3 多条件查询云记列表</p>
-<h2 id="6数据报表"><a class="markdownIt-Anchor" href="#6数据报表">#</a> 6. 数据报表</h2>
-<p><a href="https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#">https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#</a> 《6 数据报表》</p>
-<p>6.1 后端实现</p>
-<p>6.2 前端</p>
-<h2 id="7项目面试题demo"><a class="markdownIt-Anchor" href="#7项目面试题demo">#</a> 7. 项目面试题（demo）</h2>
-<p><a href="https://www.yuque.com/docs/share/f0a04126-d30f-4acb-86a4-9f328119c0e5?#">https://www.yuque.com/docs/share/f0a04126-d30f-4acb-86a4-9f328119c0e5?#</a> 《项目面试题（demo）》</p>
-]]></content>
-      <tags>
-        <tag>javaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>spring</title>
-    <url>/2022/10/12/spring/</url>
-    <content><![CDATA[<h1 id="spring笔记"><a class="markdownIt-Anchor" href="#spring笔记">#</a> Spring 笔记</h1>
-<h2 id="1springioc"><a class="markdownIt-Anchor" href="#1springioc">#</a> 1.SpringIOC</h2>
-<p><a href="https://www.yuque.com/docs/share/ad32e63d-d2fa-4277-b03b-338a2e802c91?#">https://www.yuque.com/docs/share/ad32e63d-d2fa-4277-b03b-338a2e802c91?#</a> 《Spring IOC》</p>
-<p>1.1Spring 框架</p>
-<p>1.2SpringIOC 容器 Bean 对象实例化模拟 (了解)</p>
-<p>1.3Spring 配置文件加载</p>
-<p>1.4SpringIOC 容器 Bean 对象实例化</p>
-<p>1.5SpringIOC 手动装配（注入）</p>
-<p>1.6SpringIOC 自动装配</p>
-<p>1.7SpringIOC 扫描器</p>
-<p>1.8Bean 的作用域与生命周期</p>
-<h2 id="2springaop"><a class="markdownIt-Anchor" href="#2springaop">#</a> 2.SpringAOP</h2>
-<p><a href="https://www.yuque.com/docs/share/5394a511-0049-4f3f-b722-6199c7c7aa67?#">https://www.yuque.com/docs/share/5394a511-0049-4f3f-b722-6199c7c7aa67?#</a> 《Spring AOP》</p>
-<p>2.1 代理模式</p>
-<p>2.2 静态代理</p>
-<p>2.3 动态代理</p>
-<p>2.4SpringAOP</p>
-<p>2.5SpringAOP 的实现</p>
-<p>2.6SpringAOP 总结</p>
-<h2 id="3springjdbc事务控制"><a class="markdownIt-Anchor" href="#3springjdbc事务控制">#</a> 3.SpringJDBC + 事务控制</h2>
-<p><a href="https://www.yuque.com/docs/share/50194fb7-0775-4166-8e56-be814e968836?#">https://www.yuque.com/docs/share/50194fb7-0775-4166-8e56-be814e968836?#</a> 《SpringJDBC + 事务控制》</p>
-<p>3.1Spring 整合 JDBC 环境</p>
-<p>3.2Spring 事务控制</p>
-<h2 id="4springmvc"><a class="markdownIt-Anchor" href="#4springmvc">#</a> 4.SpringMVC</h2>
-<p><a href="https://www.yuque.com/docs/share/a490e993-6b99-40bb-a314-f083563cb39d?#">https://www.yuque.com/docs/share/a490e993-6b99-40bb-a314-f083563cb39d?#</a> 《SpringMVC 基础》</p>
-<p>4.1MVC 思想和 SpringMvc 框架</p>
-<p>4.2SpringMvc 请求流程</p>
-<p>4.3SpringMvc 环境搭建与测试</p>
-<p>4.4URL 地址映射配置 &amp; 参数绑定</p>
-<p>4.5 请求转发与重定向的问题</p>
-<p>4.6SpringMvc 之 Json 数据开发</p>
-<h2 id="5springmvc进阶"><a class="markdownIt-Anchor" href="#5springmvc进阶">#</a> 5.SpringMvc 进阶</h2>
-<p><a href="https://www.yuque.com/xiaobaozi-x7lur/exyse9/qmz6zg">https://www.yuque.com/xiaobaozi-x7lur/exyse9/qmz6zg</a></p>
-<p>5.1 拦截器</p>
-<p>5.2SpringMvc 文件上传</p>
-<p>5.3SSM 框架集成与测试</p>
-<p>5.4RestFul URL</p>
-<p>5.5SpringMvc 全局统一异常处理</p>
-<h2 id="6springboot第一天"><a class="markdownIt-Anchor" href="#6springboot第一天">#</a> 6.SpringBoot 第一天</h2>
-<p><a href="https://www.yuque.com/xiaobaozi-x7lur/exyse9/mf1s68">https://www.yuque.com/xiaobaozi-x7lur/exyse9/mf1s68</a></p>
-<p>6.1 概念 &amp; 特点</p>
-<p>6.2 快速入门</p>
-<p>6.3 核心配置</p>
-<p>6.4Freemarker 视图集成</p>
-<p>6.5Thymeleaf 视图集成</p>
-<p>6.6 静态资源访问</p>
-<p>6.7 应用打包与部署</p>
-<h2 id="7springboot第二天"><a class="markdownIt-Anchor" href="#7springboot第二天">#</a> 7.SpringBoot 第二天</h2>
-<p><a href="https://www.yuque.com/xiaobaozi-x7lur/exyse9/rz5ary">https://www.yuque.com/xiaobaozi-x7lur/exyse9/rz5ary</a></p>
-<p>7.1Mybatis 整合与数据访问</p>
-<p>7.2API 文档构建工具 - Swagger2</p>
-<p>7.3 热部署</p>
-<p>7.4 单元测试</p>
-<p>7.5 分布式缓存 Ehcache 整合</p>
-<p>7.6 定时调度集成 - Quartz</p>
-<p>7.7 全局异常与事务控制</p>
-<p>7.8 数据校验</p>
-]]></content>
-      <tags>
-        <tag>spring</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大数据笔记</title>
-    <url>/2022/12/28/%E5%A4%A7%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<h4 id="1linux01"><a class="markdownIt-Anchor" href="#1linux01">#</a> 1.Linux01</h4>
-<p><a href="https://www.yuque.com/xiaobaozi-x7lur/ixnruk/cgld71">https://www.yuque.com/xiaobaozi-x7lur/ixnruk/cgld71</a></p>
-<h4 id="2linux02"><a class="markdownIt-Anchor" href="#2linux02">#</a> 2.Linux02</h4>
-<p><a href="https://www.yuque.com/xiaobaozi-x7lur/ixnruk/hphe3hfm9cmol513">https://www.yuque.com/xiaobaozi-x7lur/ixnruk/hphe3hfm9cmol513</a></p>
-<h4 id="3shell"><a class="markdownIt-Anchor" href="#3shell">#</a> 3.shell</h4>
-<p>未位做笔记，如果做了补一下（见宝宇老师 PDF）</p>
-<h4 id="4zookeeper"><a class="markdownIt-Anchor" href="#4zookeeper">#</a> 4.Zookeeper</h4>
-<p><a href="https://seed-package-b4c.notion.site/Zookeeper-98bb0c0ef6c84c94a4471cc790f4d1a3">https://seed-package-b4c.notion.site/Zookeeper-98bb0c0ef6c84c94a4471cc790f4d1a3</a></p>
-<h4 id="5hadoop-hdfs"><a class="markdownIt-Anchor" href="#5hadoop-hdfs">#</a> 5.Hadoop-HDFS</h4>
-<p><a href="https://seed-package-b4c.notion.site/Hadoop-HDFS-a859014b615742d387d5c4c5ea3a5c78">https://seed-package-b4c.notion.site/Hadoop-HDFS-a859014b615742d387d5c4c5ea3a5c78</a></p>
-<h4 id="6hadoop-mapreduce"><a class="markdownIt-Anchor" href="#6hadoop-mapreduce">#</a> 6.Hadoop-MapReduce</h4>
-<p><a href="https://seed-package-b4c.notion.site/Hadoop-MapReduce-398bee14ae734948a47344b6286c04ff">https://seed-package-b4c.notion.site/Hadoop-MapReduce-398bee14ae734948a47344b6286c04ff</a></p>
-<h4 id="7hadoop-yarn"><a class="markdownIt-Anchor" href="#7hadoop-yarn">#</a> 7.Hadoop-Yarn</h4>
-<p><a href="https://seed-package-b4c.notion.site/Hadoop-Yarn-d3cf017198f24f61b3af23c3a758e870">https://seed-package-b4c.notion.site/Hadoop-Yarn-d3cf017198f24f61b3af23c3a758e870</a></p>
-<h4 id="8hive01"><a class="markdownIt-Anchor" href="#8hive01">#</a> 8.Hive01</h4>
-<p><a href="https://seed-package-b4c.notion.site/Hive01-1e09a67e9a6041ccaa055f41d3845a81">https://seed-package-b4c.notion.site/Hive01-1e09a67e9a6041ccaa055f41d3845a81</a></p>
-<h4 id="9hive02"><a class="markdownIt-Anchor" href="#9hive02">#</a> 9.Hive02</h4>
-<p><a href="https://seed-package-b4c.notion.site/Hive02-a0924414ed734875ac8ce51c244e8aed">https://seed-package-b4c.notion.site/Hive02-a0924414ed734875ac8ce51c244e8aed</a></p>
-<h4 id="10hbase"><a class="markdownIt-Anchor" href="#10hbase">#</a> 10.HBase</h4>
-<p><a href="https://seed-package-b4c.notion.site/HBase-b7619b78dd504821a06b92dd6cd5ae37">https://seed-package-b4c.notion.site/HBase-b7619b78dd504821a06b92dd6cd5ae37</a></p>
-<h4 id="11phnexion和tez"><a class="markdownIt-Anchor" href="#11phnexion和tez">#</a> 11.Phnexion 和 TEZ</h4>
-<p>未做笔记，如果做了补一下（见宝宇老师 PDF）</p>
-<h4 id="12scala基础及至简原则"><a class="markdownIt-Anchor" href="#12scala基础及至简原则">#</a> 12.scala 基础及至简原则</h4>
-<p><a href="https://seed-package-b4c.notion.site/Scala01-cacc470e7dcd479285c8d999a2e72647">https://seed-package-b4c.notion.site/Scala01-cacc470e7dcd479285c8d999a2e72647</a></p>
-<h4 id="13scala集合"><a class="markdownIt-Anchor" href="#13scala集合">#</a> 13.scala 集合</h4>
-<p><a href="https://seed-package-b4c.notion.site/Scala02-a0120ead3c2143ad83d4d3b9771737c7">https://seed-package-b4c.notion.site/Scala02-a0120ead3c2143ad83d4d3b9771737c7</a></p>
-<h4 id="14scala高阶函数及其他"><a class="markdownIt-Anchor" href="#14scala高阶函数及其他">#</a> 14.scala 高阶函数及其他</h4>
-<p><a href="https://seed-package-b4c.notion.site/Scala03-cb2017d0088f4defb95201b63ee6b259">https://seed-package-b4c.notion.site/Scala03-cb2017d0088f4defb95201b63ee6b259</a></p>
-<h4 id="15spark-算子及案例"><a class="markdownIt-Anchor" href="#15spark-算子及案例">#</a> 15.Spark - 算子及案例</h4>
-<p><a href="https://seed-package-b4c.notion.site/Spark-4341c2a00618409bbcdbab8af3404222">https://seed-package-b4c.notion.site/Spark-4341c2a00618409bbcdbab8af3404222</a></p>
-<h4 id="16spark-core"><a class="markdownIt-Anchor" href="#16spark-core">#</a> 16.Spark-core</h4>
-<p><a href="https://seed-package-b4c.notion.site/Spark-core-43ab89ace0b94d798bf55f292af5d322">https://seed-package-b4c.notion.site/Spark-core-43ab89ace0b94d798bf55f292af5d322</a></p>
-<h4 id="17spark-sql"><a class="markdownIt-Anchor" href="#17spark-sql">#</a> 17.Spark-SQL</h4>
-<p><a href="https://seed-package-b4c.notion.site/Spark-SQL-8e8bba63b72a4e199447bfa4eebe21f4">https://seed-package-b4c.notion.site/Spark-SQL-8e8bba63b72a4e199447bfa4eebe21f4</a></p>
-<h4 id="18spark-streaming"><a class="markdownIt-Anchor" href="#18spark-streaming">#</a> 18.Spark-Streaming</h4>
-<p><a href="https://seed-package-b4c.notion.site/Spark-Stream-7e28eb84298041469144692996826a2c">https://seed-package-b4c.notion.site/Spark-Stream-7e28eb84298041469144692996826a2c</a></p>
-]]></content>
-      <tags>
-        <tag>大数据</tag>
-      </tags>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>大数据笔记</title>
+      <link href="/2022/12/18/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <url>/2022/12/18/%E5%A4%A7%E6%95%B0%E6%8D%AE/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1linux01"><a class="markdownIt-Anchor" href="#1linux01">#</a> 1.Linux01</h4><p><a href="https://www.yuque.com/xiaobaozi-x7lur/ixnruk/cgld71">https://www.yuque.com/xiaobaozi-x7lur/ixnruk/cgld71</a></p><h4 id="2linux02"><a class="markdownIt-Anchor" href="#2linux02">#</a> 2.Linux02</h4><p><a href="https://www.yuque.com/xiaobaozi-x7lur/ixnruk/hphe3hfm9cmol513">https://www.yuque.com/xiaobaozi-x7lur/ixnruk/hphe3hfm9cmol513</a></p><h4 id="3shell"><a class="markdownIt-Anchor" href="#3shell">#</a> 3.shell</h4><p>未位做笔记，如果做了补一下（见宝宇老师 PDF）</p><h4 id="4zookeeper"><a class="markdownIt-Anchor" href="#4zookeeper">#</a> 4.Zookeeper</h4><p><a href="https://seed-package-b4c.notion.site/Zookeeper-98bb0c0ef6c84c94a4471cc790f4d1a3">https://seed-package-b4c.notion.site/Zookeeper-98bb0c0ef6c84c94a4471cc790f4d1a3</a></p><h4 id="5hadoop-hdfs"><a class="markdownIt-Anchor" href="#5hadoop-hdfs">#</a> 5.Hadoop-HDFS</h4><p><a href="https://seed-package-b4c.notion.site/Hadoop-HDFS-a859014b615742d387d5c4c5ea3a5c78">https://seed-package-b4c.notion.site/Hadoop-HDFS-a859014b615742d387d5c4c5ea3a5c78</a></p><h4 id="6hadoop-mapreduce"><a class="markdownIt-Anchor" href="#6hadoop-mapreduce">#</a> 6.Hadoop-MapReduce</h4><p><a href="https://seed-package-b4c.notion.site/Hadoop-MapReduce-398bee14ae734948a47344b6286c04ff">https://seed-package-b4c.notion.site/Hadoop-MapReduce-398bee14ae734948a47344b6286c04ff</a></p><h4 id="7hadoop-yarn"><a class="markdownIt-Anchor" href="#7hadoop-yarn">#</a> 7.Hadoop-Yarn</h4><p><a href="https://seed-package-b4c.notion.site/Hadoop-Yarn-d3cf017198f24f61b3af23c3a758e870">https://seed-package-b4c.notion.site/Hadoop-Yarn-d3cf017198f24f61b3af23c3a758e870</a></p><h4 id="8hive01"><a class="markdownIt-Anchor" href="#8hive01">#</a> 8.Hive01</h4><p><a href="https://seed-package-b4c.notion.site/Hive01-1e09a67e9a6041ccaa055f41d3845a81">https://seed-package-b4c.notion.site/Hive01-1e09a67e9a6041ccaa055f41d3845a81</a></p><h4 id="9hive02"><a class="markdownIt-Anchor" href="#9hive02">#</a> 9.Hive02</h4><p><a href="https://seed-package-b4c.notion.site/Hive02-a0924414ed734875ac8ce51c244e8aed">https://seed-package-b4c.notion.site/Hive02-a0924414ed734875ac8ce51c244e8aed</a></p><h4 id="10hbase"><a class="markdownIt-Anchor" href="#10hbase">#</a> 10.HBase</h4><p><a href="https://seed-package-b4c.notion.site/HBase-b7619b78dd504821a06b92dd6cd5ae37">https://seed-package-b4c.notion.site/HBase-b7619b78dd504821a06b92dd6cd5ae37</a></p><h4 id="11phnexion和tez"><a class="markdownIt-Anchor" href="#11phnexion和tez">#</a> 11.Phnexion 和 TEZ</h4><p>未做笔记，如果做了补一下（见宝宇老师 PDF）</p><h4 id="12scala基础及至简原则"><a class="markdownIt-Anchor" href="#12scala基础及至简原则">#</a> 12.scala 基础及至简原则</h4><p><a href="https://seed-package-b4c.notion.site/Scala01-cacc470e7dcd479285c8d999a2e72647">https://seed-package-b4c.notion.site/Scala01-cacc470e7dcd479285c8d999a2e72647</a></p><h4 id="13scala集合"><a class="markdownIt-Anchor" href="#13scala集合">#</a> 13.scala 集合</h4><p><a href="https://seed-package-b4c.notion.site/Scala02-a0120ead3c2143ad83d4d3b9771737c7">https://seed-package-b4c.notion.site/Scala02-a0120ead3c2143ad83d4d3b9771737c7</a></p><h4 id="14scala高阶函数及其他"><a class="markdownIt-Anchor" href="#14scala高阶函数及其他">#</a> 14.scala 高阶函数及其他</h4><p><a href="https://seed-package-b4c.notion.site/Scala03-cb2017d0088f4defb95201b63ee6b259">https://seed-package-b4c.notion.site/Scala03-cb2017d0088f4defb95201b63ee6b259</a></p><h4 id="15spark-算子及案例"><a class="markdownIt-Anchor" href="#15spark-算子及案例">#</a> 15.Spark - 算子及案例</h4><p><a href="https://seed-package-b4c.notion.site/Spark-4341c2a00618409bbcdbab8af3404222">https://seed-package-b4c.notion.site/Spark-4341c2a00618409bbcdbab8af3404222</a></p><h4 id="16spark-core"><a class="markdownIt-Anchor" href="#16spark-core">#</a> 16.Spark-core</h4><p><a href="https://seed-package-b4c.notion.site/Spark-core-43ab89ace0b94d798bf55f292af5d322">https://seed-package-b4c.notion.site/Spark-core-43ab89ace0b94d798bf55f292af5d322</a></p><h4 id="17spark-sql"><a class="markdownIt-Anchor" href="#17spark-sql">#</a> 17.Spark-SQL</h4><p><a href="https://seed-package-b4c.notion.site/Spark-SQL-8e8bba63b72a4e199447bfa4eebe21f4">https://seed-package-b4c.notion.site/Spark-SQL-8e8bba63b72a4e199447bfa4eebe21f4</a></p><h4 id="18spark-streaming"><a class="markdownIt-Anchor" href="#18spark-streaming">#</a> 18.Spark-Streaming</h4><p><a href="https://seed-package-b4c.notion.site/Spark-Stream-7e28eb84298041469144692996826a2c">https://seed-package-b4c.notion.site/Spark-Stream-7e28eb84298041469144692996826a2c</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 大数据 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>spring</title>
+      <link href="/2022/10/12/spring/"/>
+      <url>/2022/10/12/spring/</url>
+      
+        <content type="html"><![CDATA[<h1 id="spring笔记"><a class="markdownIt-Anchor" href="#spring笔记">#</a> Spring 笔记</h1><h2 id="1springioc"><a class="markdownIt-Anchor" href="#1springioc">#</a> 1.SpringIOC</h2><p><a href="https://www.yuque.com/docs/share/ad32e63d-d2fa-4277-b03b-338a2e802c91?#">https://www.yuque.com/docs/share/ad32e63d-d2fa-4277-b03b-338a2e802c91?#</a> 《Spring IOC》</p><p>1.1Spring 框架</p><p>1.2SpringIOC 容器 Bean 对象实例化模拟 (了解)</p><p>1.3Spring 配置文件加载</p><p>1.4SpringIOC 容器 Bean 对象实例化</p><p>1.5SpringIOC 手动装配（注入）</p><p>1.6SpringIOC 自动装配</p><p>1.7SpringIOC 扫描器</p><p>1.8Bean 的作用域与生命周期</p><h2 id="2springaop"><a class="markdownIt-Anchor" href="#2springaop">#</a> 2.SpringAOP</h2><p><a href="https://www.yuque.com/docs/share/5394a511-0049-4f3f-b722-6199c7c7aa67?#">https://www.yuque.com/docs/share/5394a511-0049-4f3f-b722-6199c7c7aa67?#</a> 《Spring AOP》</p><p>2.1 代理模式</p><p>2.2 静态代理</p><p>2.3 动态代理</p><p>2.4SpringAOP</p><p>2.5SpringAOP 的实现</p><p>2.6SpringAOP 总结</p><h2 id="3springjdbc事务控制"><a class="markdownIt-Anchor" href="#3springjdbc事务控制">#</a> 3.SpringJDBC + 事务控制</h2><p><a href="https://www.yuque.com/docs/share/50194fb7-0775-4166-8e56-be814e968836?#">https://www.yuque.com/docs/share/50194fb7-0775-4166-8e56-be814e968836?#</a> 《SpringJDBC + 事务控制》</p><p>3.1Spring 整合 JDBC 环境</p><p>3.2Spring 事务控制</p><h2 id="4springmvc"><a class="markdownIt-Anchor" href="#4springmvc">#</a> 4.SpringMVC</h2><p><a href="https://www.yuque.com/docs/share/a490e993-6b99-40bb-a314-f083563cb39d?#">https://www.yuque.com/docs/share/a490e993-6b99-40bb-a314-f083563cb39d?#</a> 《SpringMVC 基础》</p><p>4.1MVC 思想和 SpringMvc 框架</p><p>4.2SpringMvc 请求流程</p><p>4.3SpringMvc 环境搭建与测试</p><p>4.4URL 地址映射配置 &amp; 参数绑定</p><p>4.5 请求转发与重定向的问题</p><p>4.6SpringMvc 之 Json 数据开发</p><h2 id="5springmvc进阶"><a class="markdownIt-Anchor" href="#5springmvc进阶">#</a> 5.SpringMvc 进阶</h2><p><a href="https://www.yuque.com/xiaobaozi-x7lur/exyse9/qmz6zg">https://www.yuque.com/xiaobaozi-x7lur/exyse9/qmz6zg</a></p><p>5.1 拦截器</p><p>5.2SpringMvc 文件上传</p><p>5.3SSM 框架集成与测试</p><p>5.4RestFul URL</p><p>5.5SpringMvc 全局统一异常处理</p><h2 id="6springboot第一天"><a class="markdownIt-Anchor" href="#6springboot第一天">#</a> 6.SpringBoot 第一天</h2><p><a href="https://www.yuque.com/xiaobaozi-x7lur/exyse9/mf1s68">https://www.yuque.com/xiaobaozi-x7lur/exyse9/mf1s68</a></p><p>6.1 概念 &amp; 特点</p><p>6.2 快速入门</p><p>6.3 核心配置</p><p>6.4Freemarker 视图集成</p><p>6.5Thymeleaf 视图集成</p><p>6.6 静态资源访问</p><p>6.7 应用打包与部署</p><h2 id="7springboot第二天"><a class="markdownIt-Anchor" href="#7springboot第二天">#</a> 7.SpringBoot 第二天</h2><p><a href="https://www.yuque.com/xiaobaozi-x7lur/exyse9/rz5ary">https://www.yuque.com/xiaobaozi-x7lur/exyse9/rz5ary</a></p><p>7.1Mybatis 整合与数据访问</p><p>7.2API 文档构建工具 - Swagger2</p><p>7.3 热部署</p><p>7.4 单元测试</p><p>7.5 分布式缓存 Ehcache 整合</p><p>7.6 定时调度集成 - Quartz</p><p>7.7 全局异常与事务控制</p><p>7.8 数据校验</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> spring </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>云日记</title>
+      <link href="/2022/10/05/%E4%BA%91%E6%97%A5%E8%AE%B0/"/>
+      <url>/2022/10/05/%E4%BA%91%E6%97%A5%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="云日记项目"><a class="markdownIt-Anchor" href="#云日记项目">#</a> 云日记项目</h1><h1 id="1项目介绍及环境搭建"><a class="markdownIt-Anchor" href="#1项目介绍及环境搭建">#</a> 1. 项目介绍及环境搭建</h1><h2 id="11项目简介"><a class="markdownIt-Anchor" href="#11项目简介">#</a> 1.1 项目简介</h2><p>云 R 记软件就是用于记录日常生活点滴。一款跨平台的简单快速的个人记事备忘工具，并且能够实现 PC、移动设备和云端之间的信息同步，简洁高效。将会议记录、日程安排、生活备忘，奇思妙想、快乐趣事以及任何突发灵感都可快速记录到系统中。</p><h2 id="12技术选型"><a class="markdownIt-Anchor" href="#12技术选型">#</a> 1.2 技术选型</h2><p>本系统采用 B/S 架构，使用 BootStrap + Jsp + Servlet + MySQL+ Tomcat 开发，使用 Maven 构建，采用 Junit 单元测试、Log4j 搭建日志、使用 POI 导入导出报表，操作 DB 使用 DBUtil。</p><h2 id="13核心模块"><a class="markdownIt-Anchor" href="#13核心模块">#</a> 1.3 核心模块</h2><p>本项目包含用户模块、类型模块、云记模块、数据报表、首页模块这几个核心模块，核心主旨是掌握功能的分析以及前后台数据交互。</p><h2 id="14具体功能"><a class="markdownIt-Anchor" href="#14具体功能">#</a> 1.4 具体功能</h2><h2 id="15技术细节"><a class="markdownIt-Anchor" href="#15技术细节">#</a> 1.5 技术细节</h2><p>增删改查<br>免登录：Session 和 Cookie<br> 非法访问：过滤器 Filter<br> 文件上传<br>分页<br> Ajax：Dom 操作<br>富文本编辑器</p><h2 id="16数据库设计"><a class="markdownIt-Anchor" href="#16数据库设计">#</a> 1.6 数据库设计</h2><p>用户表 类型表 云记表</p><h2 id="17环境搭建"><a class="markdownIt-Anchor" href="#17环境搭建">#</a> 1.7 环境搭建</h2><h3 id="171新建项目"><a class="markdownIt-Anchor" href="#171新建项目">#</a> 1.71 新建项目</h3><p>选择 “File” ——&gt; “New” ——&gt; “Project…” ，选择 “Maven”，设置 JDK 版本，选择 Maven Web 项目的模板</p><h3 id="172设置项目信息"><a class="markdownIt-Anchor" href="#172设置项目信息">#</a> 1.72 设置项目信息</h3><p>设置项目的名称、存放的工作空间，以及对应的 GroupId</p><h3 id="173修改配置"><a class="markdownIt-Anchor" href="#173修改配置">#</a> 1.73 修改配置</h3><p>在 pomx.xml 配置文件中，修改配置、添加依赖与插件</p><h2 id="18maven导入的jar包"><a class="markdownIt-Anchor" href="#18maven导入的jar包">#</a> 1.8maven 导入的 jar 包</h2><p>junit 测试<br> web servlet<br>log4j 日志打印相关的 jar<br>mysql 驱动包<br> fastjson  json 依赖<br> hutool 工具集<br> commons-io 依赖<br>添加百度编辑器 ueditor 支持<br> jstl 依赖<br> servlet-api<br>lombok 插件 注解生成 getter-setter</p><h2 id="19单元测试"><a class="markdownIt-Anchor" href="#19单元测试">#</a> 1.9 单元测试</h2><p>git config --global --unset https.proxy<br> 在 src/main 目录下，新建 test 目录（测试目录），新建 java 目录（测试源文件夹）</p><p>添加 @Test 对应测试方法可独立运行</p><h2 id="1x配置文件"><a class="markdownIt-Anchor" href="#1x配置文件">#</a> 1.x 配置文件</h2><p>在 src/main/resources 目录下，新建 log4j.properties 文件</p><h2 id="2用户模块"><a class="markdownIt-Anchor" href="#2用户模块">#</a> 2. 用户模块</h2><p><a href="https://www.yuque.com/docs/share/deb2abc8-02c8-467c-ad78-019c70dab1f3?#">https://www.yuque.com/docs/share/deb2abc8-02c8-467c-ad78-019c70dab1f3?#</a> 《用户模块》</p><p>2.1 用户登录</p><p>2.2 用户退出</p><p>2.3 验证用户名的唯一性</p><p>2.4 加载头像</p><p>2.5 修改用户信息</p><p>2.6 非法访问拦截</p><p>2.7 免密登录</p><h2 id="3类型模块"><a class="markdownIt-Anchor" href="#3类型模块">#</a> 3. 类型模块</h2><p><a href="https://www.yuque.com/docs/share/77a381bf-80e0-42f8-846c-e8e4f5eeb2bd?#">https://www.yuque.com/docs/share/77a381bf-80e0-42f8-846c-e8e4f5eeb2bd?#</a> 《云记类型》</p><p>3.1 查询类型的列表</p><p>3.2 验证类型名的唯一性</p><p>3.3 添加类型，修改类型</p><p>3.4 删除类型</p><h2 id="4云记模块"><a class="markdownIt-Anchor" href="#4云记模块">#</a> 4. 云记模块</h2><p><a href="https://www.yuque.com/docs/share/01955cf2-bb23-4059-8e14-1ba665209533?#">https://www.yuque.com/docs/share/01955cf2-bb23-4059-8e14-1ba665209533?#</a> 《云记模块》</p><p>4.1 添加、修改云记</p><p>4.2 删除云记</p><p>4.3 分页查询云记列表</p><p>4.4 查询云记详情</p><h2 id="5云记主页"><a class="markdownIt-Anchor" href="#5云记主页">#</a> 5. 云记主页</h2><p><a href="https://www.yuque.com/docs/share/4d1610f7-687b-4575-87a8-23a2bd19e491?#">https://www.yuque.com/docs/share/4d1610f7-687b-4575-87a8-23a2bd19e491?#</a> 《云记主页》</p><p>5.1 显示用户信息</p><p>5.2 分页查询云记列表</p><p>5.3 多条件查询云记列表</p><h2 id="6数据报表"><a class="markdownIt-Anchor" href="#6数据报表">#</a> 6. 数据报表</h2><p><a href="https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#">https://www.yuque.com/docs/share/b7405355-305e-4d9e-9672-77a6c6f87877?#</a> 《6 数据报表》</p><p>6.1 后端实现</p><p>6.2 前端</p><h2 id="7项目面试题demo"><a class="markdownIt-Anchor" href="#7项目面试题demo">#</a> 7. 项目面试题（demo）</h2><p><a href="https://www.yuque.com/docs/share/f0a04126-d30f-4acb-86a4-9f328119c0e5?#">https://www.yuque.com/docs/share/f0a04126-d30f-4acb-86a4-9f328119c0e5?#</a> 《项目面试题（demo）》</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> javaWeb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>redis简单介绍</title>
+      <link href="/2022/10/04/redis%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2022/10/04/redis%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1什么是redis"><a class="markdownIt-Anchor" href="#1什么是redis">#</a> 1. 什么是 Redis</h3><p>Redis (Remote Dictionary Server) 是一个使用 C 语言编写的，开源的（BSD 许可）高性能非关系型（NoSQL）的键值对数据库。Redis 可以存储键和五种不同类型的值之间的映射。键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。与传统数据库不同的是 Redis 的数据是存在内存中的，所以读写速度非常快，因此 redis 被广泛应用于缓存方向，每秒可以处理超过 10 万次读写操作，是已知性能最快的 Key-Value DB。另外，Redis 也经常用来做分布式锁。除此之外，Redis 支持事务 、持久化、LUA 脚本、LRU 驱动事件、多种集群方案。</p><h3 id="2redis有哪些优缺点"><a class="markdownIt-Anchor" href="#2redis有哪些优缺点">#</a> 2.Redis 有哪些优缺点</h3><p>优点:</p><p>2.1 读写性能优异， Redis 能读的速度是 110000 次 /s，写的速度是 81000 次 /s。</p><p>2.2 支持数据持久化，支持 AOF 和 RDB 两种持久化方式。</p><p>2.3 支持事务，Redis 的所有操作都是原子性的，同时 Redis 还支持对几个操作合并后的原子性执行。</p><p>2.4 数据结构丰富，除了支持 string 类型的 value 外还支持 hash、set、zset、list 等数据结构。</p><p>2.5 支持主从复制，主机会自动将数据同步到从机，可以进行读写分离。</p><p>缺点:</p><p>2.1 数据库容量受到物理内存的限制，不能用作海量数据的高性能读写，因此 Redis 适合的场景主要局限在较小数据量的高性能操作和运算上。</p><p>2.2Redis 不具备自动容错和恢复功能，主机从机的宕机都会导致前端部分读写请求失败，需要等待机器重启或者手动切换前端的 IP 才能恢复。</p><p>2.3 主机宕机，宕机前有部分数据未能及时同步到从机，切换 IP 后还会引入数据不一致的问题，降低了系统的可用性。</p><p>2.4Redis 较难支持在线扩容，在集群容量达到上限时在线扩容会变得很复杂。为避免这一问题，运维人员在系统上线时必须确保有足够的空间，这对资源造成了很大的浪费。</p><p>为什么要用 Redis / 为什么要用缓存</p><h3 id="3为什么要用-redis-为什么要用缓存"><a class="markdownIt-Anchor" href="#3为什么要用-redis-为什么要用缓存">#</a> 3. 为什么要用 Redis / 为什么要用缓存</h3><p>3.1 高性能：</p><p>假如用户第一次访问数据库中的某些数据。这个过程会比较慢，因为是从硬盘上读取的。将该用户访问的数据存在数缓存中，这样下一次再访问这些数据的时候就可以直接从缓存中获取了。操作缓存就是直接操作内存，所以速度相当快。如果数据库中的对应数据改变的之后，同步改变缓存中相应的数据即可！</p><p>3.2 高并发：</p><p>直接操作缓存能够承受的请求是远远大于直接访问数据库的，所以我们可以考虑把数据库中的部分数据转移到缓存中去，这样用户的一部分请求会直接到缓存这里而不用经过数据库。</p><h3 id="4redis有哪些数据类型"><a class="markdownIt-Anchor" href="#4redis有哪些数据类型">#</a> 4.Redis 有哪些数据类型</h3><p>Redis 主要有 5 种数据类型，包括 String，List，Set，Zset，Hash，满足大部分的使用要求</p><p><a href="http://t.csdn.cn/dhFOX">http://t.csdn.cn/dhFOX</a></p><h3 id="5redis-常见的使用场景"><a class="markdownIt-Anchor" href="#5redis-常见的使用场景">#</a> 5.Redis 常见的使用场景</h3><p>一、缓存</p><p>作为 Key-Value 形态的内存数据库，Redis 最先会被想到的应用场景便是作为数据缓存。目前这几乎是所有中大型网站都在用的必杀技，合理的利用缓存不仅能够提升网站访问速度，还能大大降低数据库的压力，而使用 Redis 缓存数据也非常简单，只需要通过 string 类型将序列化后的对象存起来即可，不过也有一些需要注意的地方：</p><p>（一）必须保证不同对象的 key 不会重复，并且使 key 尽量短，一般使用类名（表名）加主键拼接而成。</p><p>（二）选择一个优秀的序列化方式也很重要，目的是提高序列化的效率和减少内存占用。</p><p>（三）缓存内容与数据库的一致性，这里一般有两种做法：</p><p>①只在数据库查询后将对象放入缓存，如果对象发生了修改或删除操作，直接清除对应缓存（或设为过期）。</p><p>②在数据库新增和查询后将对象放入缓存，修改后更新缓存，删除后清除对应缓存（或设为过期）。</p><p>二、排行榜</p><p>很多网站目前都有排行榜的应用，如淘宝的年度 / 每日销量榜单、商品按时间的上新排行榜等。利用 Redis 的 zset 结构能实现各种复杂的排行榜应用。比如使用 zset 和一个计算热度的算法便可以轻松打造一个热度排行榜，zrevrangebyscore 可以得到以分数倒序排列的序列，zrank 可以得到一个成员在该排行榜的位置（是分数正序排列时的位置，如果要获取倒序排列时的位置需要用 zcard-zrank）。</p><p>三、计数器</p><p>什么是计数器，如文章的阅读量、微博点赞数、视频网站视频的播放数等。为了保证数据实时效，每次浏览都得给 + 1，并发量高时如果每次都请求数据库操作无疑是种挑战和压力。我们可以先写入 Redis 再定时同步到数据库，Redis 提供的 incr 命令来实现计数器功能，内存操作，性能非常好，非常适用于这些计数场景。</p><p>计数功能应该是最适合 Redis 的使用场景之一了，因为它高频率读写的特征可以完全发挥 Redis 作为内存数据库的高效。在 Redis 的数据结构中，string、hash 和 sorted set 都提供了 incr 方法用于原子性的自增操作，下面举例说明一下它们各自的使用场景：</p><p>（1）如果应用需要显示每天的注册用户数，便可以使用 string 作为计数器，设定一个名为 REGISTERED_COUNT_TODAY 的 key，并在初始化时给它设置一个到凌晨 0 点的过期时间，每当用户注册成功后便使用 incr 命令使该 key 增长 1，同时当每天凌晨 0 点后，这个计数器都会因为 key 过期使值清零。</p><p>（2）每条微博都有点赞数、评论数、转发数和浏览数四条属性，这时用 hash 进行计数会更好，将该计数器的 key 设为 weibo:weibo_id，hash 的 field 为 like_number、comment_number、forward_number 和 view_number，在对应操作后通过 hincrby 使 hash 中的 field 自增。</p><p>（3）如果应用有一个发帖排行榜的功能，选择 sorted set 更合适，将集合的 key 设为 POST_RANK。当用户发帖后，使用 zincrby 将该用户 id 的 score 增长 1。sorted set 会重新进行排序，用户所在排行榜的位置也就会得到实时的更新。</p><p>四、限流</p><p>在某些秒杀活动中，瞬间会有大量的用户请求涌入，而且大概率也会出现同一用户不断刷新页面或者其他操作来发送大量请求的情况，这时候我们就可以采取限流措施。那如何实现限流呢？我们可以利用 Redis 的 incr 方法，以访问者的 ip 和其他信息作为 key，访问一次增加一次计数，当同一用户的访问次数超过我们预先设定的次数则返回提示信息（比如提示用户操作过于频繁，一定时间之后再重新操作等等）。</p><p>五、分布式会话</p><p>集群模式下，在应用不多的情况下一般使用容器自带的 session 复制功能就能满足，当在应用增多且相对复杂的系统中，一般都会搭建以 Redis 等内存数据库为中心的 session 服务，session 不再由容器管理，而是由 session 服务及内存数据库管理。</p><p>————————————————</p><p>版权声明：本文为 CSDN 博主「努力努力再努力 c.」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。</p><p>原文链接：<a href="https://blog.csdn.net/m0_51358164/article/details/125927452">https://blog.csdn.net/m0_51358164/article/details/125927452</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> redis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/10/01/hello-world/"/>
+      <url>/2022/10/01/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start">#</a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post">#</a> Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server">#</a> Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files">#</a> Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites">#</a> Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
