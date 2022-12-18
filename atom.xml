@@ -3,10 +3,55 @@
     <id>https://tcy12.github.io</id>
     <title>我爱次包籽的blog</title>
     <link href="https://tcy12.github.io" />
-    <updated>2022-10-12T03:33:36.000Z</updated>
+    <updated>2022-12-28T05:52:23.000Z</updated>
     <category term="redis" />
     <category term="spring" />
     <category term="javaWeb" />
+    <category term="大数据" />
+    <entry>
+        <id>https://tcy12.github.io/2022/12/28/%E5%A4%A7%E6%95%B0%E6%8D%AE/</id>
+        <title>大数据笔记</title>
+        <link rel="alternate" href="https://tcy12.github.io/2022/12/28/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+        <content type="html">&lt;h4 id=&#34;1linux01&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1linux01&#34;&gt;#&lt;/a&gt; 1.Linux01&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/xiaobaozi-x7lur/ixnruk/cgld71&#34;&gt;https://www.yuque.com/xiaobaozi-x7lur/ixnruk/cgld71&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;2linux02&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2linux02&#34;&gt;#&lt;/a&gt; 2.Linux02&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/xiaobaozi-x7lur/ixnruk/hphe3hfm9cmol513&#34;&gt;https://www.yuque.com/xiaobaozi-x7lur/ixnruk/hphe3hfm9cmol513&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;3shell&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3shell&#34;&gt;#&lt;/a&gt; 3.shell&lt;/h4&gt;
+&lt;p&gt;未位做笔记，如果做了补一下（见宝宇老师 PDF）&lt;/p&gt;
+&lt;h4 id=&#34;4zookeeper&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4zookeeper&#34;&gt;#&lt;/a&gt; 4.Zookeeper&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Zookeeper-98bb0c0ef6c84c94a4471cc790f4d1a3&#34;&gt;https://seed-package-b4c.notion.site/Zookeeper-98bb0c0ef6c84c94a4471cc790f4d1a3&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;5hadoop-hdfs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5hadoop-hdfs&#34;&gt;#&lt;/a&gt; 5.Hadoop-HDFS&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Hadoop-HDFS-a859014b615742d387d5c4c5ea3a5c78&#34;&gt;https://seed-package-b4c.notion.site/Hadoop-HDFS-a859014b615742d387d5c4c5ea3a5c78&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;6hadoop-mapreduce&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6hadoop-mapreduce&#34;&gt;#&lt;/a&gt; 6.Hadoop-MapReduce&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Hadoop-MapReduce-398bee14ae734948a47344b6286c04ff&#34;&gt;https://seed-package-b4c.notion.site/Hadoop-MapReduce-398bee14ae734948a47344b6286c04ff&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;7hadoop-yarn&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7hadoop-yarn&#34;&gt;#&lt;/a&gt; 7.Hadoop-Yarn&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Hadoop-Yarn-d3cf017198f24f61b3af23c3a758e870&#34;&gt;https://seed-package-b4c.notion.site/Hadoop-Yarn-d3cf017198f24f61b3af23c3a758e870&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;8hive01&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8hive01&#34;&gt;#&lt;/a&gt; 8.Hive01&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Hive01-1e09a67e9a6041ccaa055f41d3845a81&#34;&gt;https://seed-package-b4c.notion.site/Hive01-1e09a67e9a6041ccaa055f41d3845a81&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;9hive02&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#9hive02&#34;&gt;#&lt;/a&gt; 9.Hive02&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Hive02-a0924414ed734875ac8ce51c244e8aed&#34;&gt;https://seed-package-b4c.notion.site/Hive02-a0924414ed734875ac8ce51c244e8aed&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;10hbase&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10hbase&#34;&gt;#&lt;/a&gt; 10.HBase&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/HBase-b7619b78dd504821a06b92dd6cd5ae37&#34;&gt;https://seed-package-b4c.notion.site/HBase-b7619b78dd504821a06b92dd6cd5ae37&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;11phnexion和tez&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11phnexion和tez&#34;&gt;#&lt;/a&gt; 11.Phnexion 和 TEZ&lt;/h4&gt;
+&lt;p&gt;未做笔记，如果做了补一下（见宝宇老师 PDF）&lt;/p&gt;
+&lt;h4 id=&#34;12scala基础及至简原则&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#12scala基础及至简原则&#34;&gt;#&lt;/a&gt; 12.scala 基础及至简原则&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Scala01-cacc470e7dcd479285c8d999a2e72647&#34;&gt;https://seed-package-b4c.notion.site/Scala01-cacc470e7dcd479285c8d999a2e72647&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;13scala集合&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#13scala集合&#34;&gt;#&lt;/a&gt; 13.scala 集合&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Scala02-a0120ead3c2143ad83d4d3b9771737c7&#34;&gt;https://seed-package-b4c.notion.site/Scala02-a0120ead3c2143ad83d4d3b9771737c7&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;14scala高阶函数及其他&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#14scala高阶函数及其他&#34;&gt;#&lt;/a&gt; 14.scala 高阶函数及其他&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Scala03-cb2017d0088f4defb95201b63ee6b259&#34;&gt;https://seed-package-b4c.notion.site/Scala03-cb2017d0088f4defb95201b63ee6b259&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;15spark-算子及案例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#15spark-算子及案例&#34;&gt;#&lt;/a&gt; 15.Spark - 算子及案例&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Spark-4341c2a00618409bbcdbab8af3404222&#34;&gt;https://seed-package-b4c.notion.site/Spark-4341c2a00618409bbcdbab8af3404222&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;16spark-core&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#16spark-core&#34;&gt;#&lt;/a&gt; 16.Spark-core&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Spark-core-43ab89ace0b94d798bf55f292af5d322&#34;&gt;https://seed-package-b4c.notion.site/Spark-core-43ab89ace0b94d798bf55f292af5d322&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;17spark-sql&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#17spark-sql&#34;&gt;#&lt;/a&gt; 17.Spark-SQL&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Spark-SQL-8e8bba63b72a4e199447bfa4eebe21f4&#34;&gt;https://seed-package-b4c.notion.site/Spark-SQL-8e8bba63b72a4e199447bfa4eebe21f4&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;18spark-streaming&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#18spark-streaming&#34;&gt;#&lt;/a&gt; 18.Spark-Streaming&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://seed-package-b4c.notion.site/Spark-Stream-7e28eb84298041469144692996826a2c&#34;&gt;https://seed-package-b4c.notion.site/Spark-Stream-7e28eb84298041469144692996826a2c&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="大数据" />
+        <updated>2022-12-28T05:52:23.000Z</updated>
+    </entry>
     <entry>
         <id>https://tcy12.github.io/2022/10/12/spring/</id>
         <title>spring</title>
